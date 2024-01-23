@@ -1,0 +1,107 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #e7e7e7;
+    background-color: #f3f3f3;
+    display: flex;
+    justify-content: end;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: #666;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover:not(.active) {
+    background-color: #ddd;
+  }
+  
+  li a.active {
+    color: white;
+    background-color: #04AA6D;
+  }
+
+  .navbar{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .logo{
+    display: inline;
+    height: 50px;
+  }
+
+  th{
+    margin: 100px;
+  }
+
+ .titolo{
+    margin-bottom: 5px;
+
+ }
+ .spazio{
+        margin-bottom: 5px;
+ }
+
+ .foot{
+    margin-top: 10px;
+    background-color: #c8e7ea;
+    text-align: center;
+    padding-bottom: 10px;
+ }
+ body{
+    margin: 0;
+ }
+
+ main{
+    margin-left: 10px;
+    padding: 5px;
+ }
+
+ header{
+    margin-left: 10px;
+ }
+
+ aside{
+    margin-left: 10px;
+
+ }
+
+ .correlati{
+    margin-left: 10px;
+ }
+
+ .pic{
+    background-color:rgb(189, 243, 243) ;
+ }
+
+.torna-home{
+    text-align: center;
+}
+
+.border{
+    border-style: solid;
+}
+
+.outset{
+    border-style: outset;
+}
+
+form{
+    padding: 5px;
+}
+
+.double{
+    border-style: double;
+    margin-top: 15px;
+    padding-left: 15px;
+}
