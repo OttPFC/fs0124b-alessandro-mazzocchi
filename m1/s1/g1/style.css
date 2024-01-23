@@ -1,0 +1,49 @@
+        .foto2 {
+        height: 300px;
+        
+        }
+        ul, ol {
+            padding: 10;
+        }
+
+        footer {
+          background-color: #777;
+          padding: 5px;
+          text-align: center;
+          color: white;
+          margin-top: 20px;
+        }
+
+       
+
+        .border, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th, td{
+        margin-left: auto;
+        margin-right: auto;
+
+        }
+
+        .liste{
+            display: flex;
+            flex-direction: row;
+            align-self: center;
+            margin-bottom: 20px;
+            
+        }
+
+        .scorri{
+            display: flex;
+            justify-content: center;
+            align-self: center;
+        }
+
+       
+
+
+
+
+    
