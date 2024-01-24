@@ -36,6 +36,7 @@ span{
 
 video{
     height: 25em;
+    border-radius: 10px;
 }
 
 img{
@@ -46,7 +47,6 @@ img{
 #titolo{
     margin-top: 80px;
 }
-
 
 
 .bordo-1{
@@ -63,8 +63,6 @@ img{
     color: red;
     font-family: 'Times New Roman', Times, serif;
 }
-
-
 
 .bordo-ingred{
     border-bottom: 2px solid rgba(84, 163, 237, 0.32);
