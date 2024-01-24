@@ -1,0 +1,84 @@
+
+
+header{
+text-align: center;
+}
+
+main{
+    text-align: center;
+}
+
+#all-p{
+    align-self: left;
+}
+
+section{
+    
+    margin-left: 20em;
+    margin-right: 20em;
+}
+
+aside{
+    
+    margin-left: 20em;
+    margin-right: 20em;
+}
+
+nav{
+    border-top: 4px solid rgba(255, 166, 0, 0.32) ;
+    background-color: rgba(228, 182, 98, 0.269);
+    padding-bottom: 1px;
+}
+
+span{
+    font-weight:bold; 
+}
+
+video{
+    height: 25em;
+}
+
+img{
+    margin-bottom: 10px;
+    height: 3em;
+}
+
+#titolo{
+    margin-top: 80px;
+}
+
+
+
+.bordo-1{
+    border-left: 4px solid rgba(255, 166, 0, 0.32) ;
+    text-align: start;
+    padding-left: 1rem;
+    margin-left:20rem ;
+    margin-top: 2rem;
+    margin-bottom: 0;
+}
+
+#titolo-bottom{
+    margin-bottom: 0;
+    color: red;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+
+.bordo-ingred{
+    border-bottom: 2px solid rgba(84, 163, 237, 0.32);
+    padding: 1em;
+    text-align: start;
+    
+}
+.bordo-method{
+    border-bottom: 2px solid rgba(84, 163, 237, 0.32);
+    margin-top:0.5rem ;
+    padding: 1em;
+    text-align: start;
+    
+}
+.p-gras{
+    font-weight: bold;
+}
