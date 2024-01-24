@@ -1,27 +1,15 @@
+body{
+    margin: 0;
+}
 
-
-header{
+#header{
 text-align: center;
 }
 
-main{
-    text-align: center;
-}
-
-#all-p{
-    align-self: left;
-}
-
-section{
-    
-    margin-left: 20em;
-    margin-right: 20em;
-}
-
-aside{
-    
-    margin-left: 20em;
-    margin-right: 20em;
+.container{
+    width: 50%;
+    text-align: left;
+    margin: auto;;
 }
 
 nav{
@@ -46,16 +34,19 @@ img{
 
 #titolo{
     margin-top: 80px;
+    text-align: center;
+}
+
+.center-p{
+    text-align: center;
 }
 
 
 .bordo-1{
-    border-left: 4px solid rgba(255, 166, 0, 0.32) ;
+    border-left: 1px solid #ffd977;
     text-align: start;
     padding-left: 1rem;
-    margin-left:20rem ;
-    margin-top: 2rem;
-    margin-bottom: 0;
+    
 }
 
 #titolo-bottom{
@@ -79,4 +70,9 @@ img{
 }
 .p-gras{
     font-weight: bold;
+    margin-top: 2em;
+}
+
+li{
+    margin-bottom: 1em;;
 }
