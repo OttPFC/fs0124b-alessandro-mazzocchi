@@ -29,6 +29,7 @@ main{
     text-align: left;
     padding-left: auto;
     padding-right: auto;
+    
 }
 
 header{
@@ -64,6 +65,7 @@ img{
     color: white;
     margin-top: 15px;
     margin-bottom: 15px;
+    
 }
 
 #rossi{
@@ -72,8 +74,9 @@ img{
     margin-top: 20px;
 }
 
-.pallini{
+#pallini{
     list-style: square;
+    
 }
 p{
     margin-top: 5px;
@@ -83,6 +86,7 @@ p{
 
 .l-numeri{
     list-style-type: decimal;
+
     
 }
 
@@ -93,9 +97,26 @@ li{
 table{
     border: 1px solid black;
     margin-bottom: 5px;
+    border-bottom: rgb(77, 77, 222);
+    margin-bottom: 15px;
     
 }
 
+th{
+    background-color: rgb(86, 86, 228);
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+td{
+    border: 1px solid black;
+}
+
+form{
+    background-color: rgb(196, 194, 194);
+    text-align: center;
+}
 .titoli{
     font-weight: bold;
     margin-top: 20px;
@@ -129,4 +150,40 @@ footer{
 }
 strong{
     border-style: outset;
+}
+#d2{
+    background-color: rgb(196, 188, 188);
+    min-height: 75px;
+    max-height: 90px;
+    padding: 10px;
+    margin: 10px;
+}
+
+#d3{
+    background-color: rgb(196, 188, 188);
+    min-height: 75px;
+    max-height: 90px;
+    padding: 10px;
+    margin: 10px;
+}
+
+#corr{
+    text-align: center;
+    margin-top: 10px ;
+}
+
+#p-foot{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#p-rt{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 20px;
+    margin-right: auto;
+}
+section{
+    margin-left: 20px;
+    
 }
