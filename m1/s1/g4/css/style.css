@@ -1,0 +1,132 @@
+/* IMPOSTAZIONI GENERALI */
+
+/* HEADER */
+
+/* MAIN */
+
+/* ELEMENTI NEL MAIN - ARTICLE */
+
+/* TABELLE */
+
+/* FORM */
+
+/* ELEMENTI NELL' ASIDE */
+
+/* FOOTER */
+
+#container{
+    background-color: #ffffff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #000;    
+}
+body{   
+    margin: 15px;
+    background-image: url(../assets/img/sfondo.png);
+}
+
+main{
+    text-align: left;
+    padding-left: auto;
+    padding-right: auto;
+}
+
+header{
+    text-align: center;
+    padding-top: 30px;
+}
+
+nav{
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#box{
+    background-color: rgb(33, 131, 192);
+    height: 170px;
+    border: 1px solid #000;
+}
+
+picture{
+    margin-top: 5px;
+}
+#h-div{
+    margin-top: 0px;
+}
+
+img{
+    height: 40px;
+    
+}
+
+.c-white{
+    color: white;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#rossi{
+    font-weight: bold;
+    font-size: 2em;
+    margin-top: 20px;
+}
+
+.pallini{
+    list-style: square;
+}
+p{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    
+}
+
+.l-numeri{
+    list-style-type: decimal;
+    
+}
+
+li{
+    margin: 3px;
+}
+
+table{
+    border: 1px solid black;
+    margin-bottom: 5px;
+    
+}
+
+.titoli{
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
+}
+
+iframe{
+    border-radius: 10px;
+
+}
+
+code{
+    margin-left:5px ;
+    margin-right: 5px;
+}
+
+p, h1, li, ul, ol, a address{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+footer{
+    background-color: rgb(33, 131, 192);
+    text-align: center;
+}
+
+.b-grigio{
+    border-style: outset;
+    border-radius: 5px;
+}
+strong{
+    border-style: outset;
+}
