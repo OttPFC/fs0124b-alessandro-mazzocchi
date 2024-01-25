@@ -72,6 +72,7 @@ img{
     font-weight: bold;
     font-size: 2em;
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 #pallini{
@@ -185,5 +186,12 @@ strong{
 }
 section{
     margin-left: 20px;
-    
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding: auto;
+}
+article{
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding: auto;
 }
