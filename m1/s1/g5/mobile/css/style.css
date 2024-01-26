@@ -8,13 +8,9 @@ body{
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    font-variation-settings:
-    "wdth" 100;
+    font-variation-settings: "wdth" 100;
     line-height:1.65 ;
     
-}
-*{
-    box-sizing: border-box;
 }
 
 h1, h2, h3 ,h4 , h5 , h6{
@@ -25,8 +21,6 @@ h1, h2, h3 ,h4 , h5 , h6{
     font-style: normal;
     line-height: 1.5;
 }
-
-
 
 code{
     background-color:#f04c2f ;
@@ -41,7 +35,6 @@ code{
 a{
     text-decoration: none;
 }
-
 
 /* Header */
 header{
@@ -72,18 +65,24 @@ main{
 
 /* Article */
 
-
 section.sect1 img{
     margin-left: auto;
     margin-right: auto;
     width: 50%;
 }
 
-
-
 main div img{
     border-radius: 50% 50% 50% 50%;
     
+}
+
+#interno{
+    max-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: large;
+    margin-top: 20px;
+
 }
 
 /* Section */
@@ -121,20 +120,22 @@ section img{
     background-position: center center;
     margin-left: auto;
     margin-right: auto;
-    width: 100%;
+    
 }
 
-
 #dis-div{
-    margin-top: 100px;
+    margin-top: 50px;
+    margin-bottom: 20px;
 }
 section#color-sec p{
     margin-top: 10px;
     font-style: italic;
 }
 
+
 /* Aside */
 aside{
+    margin: 0;
     max-width: max-content;
     margin-left: auto;
     margin-right: auto;
@@ -143,7 +144,7 @@ aside{
 
 .b-div{
     text-align: center;
-    border: 0.5px solid rgb(227, 223, 223); 
+    border: 0.5px solid #dee1e3; 
     width: 250px;
     margin-bottom: 20px;
     border-radius: 5px;
@@ -164,8 +165,33 @@ footer{
     color: #c8e7f0;
     background-color: #25a2c3;
     text-align: center;
+    padding-top: 20px ;
+    padding-bottom: 30px;
+
 }
 
+footer address{
+    max-width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 1px solid white;
+    padding-bottom: 20px;
+}
 footer a{
     color: #c8e7f0 ;
+}
+
+footer h1{
+    color: white;
+}
+
+#in-p{
+    display: inline;
+}
+footer i {
+    margin-right: 0.3em;
+}
+
+#margin-p{
+    padding-top: 20px;
 }
