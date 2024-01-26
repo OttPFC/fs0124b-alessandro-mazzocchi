@@ -1,0 +1,171 @@
+/* IMPOSTAZIONI GENERALI */
+html {font-size: 62.5%;}
+body{
+    margin:0;
+    color: #393d41;
+    font-size: 1.2rem;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;
+    line-height:1.65 ;
+    
+}
+*{
+    box-sizing: border-box;
+}
+
+h1, h2, h3 ,h4 , h5 , h6{
+    color: #25a2c3;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 1.5;
+}
+
+
+
+code{
+    background-color:#f04c2f ;
+    font-family: "Montserrat", bold;
+    color: white;
+    border: 1px solid #f04c2f;
+    border-radius: 5px;
+    padding: 15px;
+    
+}
+
+a{
+    text-decoration: none;
+}
+
+
+/* Header */
+header{
+    background-color: black;
+    text-align: center;    
+
+}
+header div img {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    max-width: 100%;
+    height: auto;
+}
+
+strong{
+    font-size: 2em;
+    padding-bottom: 50px;
+}
+
+
+/* Main */
+main{
+    background-color: white;   
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+}
+
+
+/* Article */
+
+
+section.sect1 img{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+
+
+main div img{
+    border-radius: 50% 50% 50% 50%;
+    
+}
+
+/* Section */
+section{
+    padding: 1em;
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+section h2 {
+    margin-bottom: 10PX;
+}
+
+section p{
+    margin-bottom: 15px;
+}
+
+section img{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#color-sec{
+    background-color: #e22d0e;
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.sect1{
+    text-align: center;
+}
+
+#m-img{
+    background-image: url(../assets/images/banner.jpg);
+    background-position: center center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+
+#dis-div{
+    margin-top: 100px;
+}
+section#color-sec p{
+    margin-top: 10px;
+    font-style: italic;
+}
+
+/* Aside */
+aside{
+    max-width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.b-div{
+    text-align: center;
+    border: 0.5px solid rgb(227, 223, 223); 
+    width: 250px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+.t-div{
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+
+/* Footer */
+
+#upper{
+    text-transform: uppercase;
+    
+}
+
+footer{
+    color: #c8e7f0;
+    background-color: #25a2c3;
+    text-align: center;
+}
+
+footer a{
+    color: #c8e7f0 ;
+}

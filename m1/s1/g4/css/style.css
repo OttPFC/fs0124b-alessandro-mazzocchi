@@ -1,40 +1,27 @@
 /* IMPOSTAZIONI GENERALI */
 
-/* HEADER */
-
-/* MAIN */
-
-/* ELEMENTI NEL MAIN - ARTICLE */
-
-/* TABELLE */
-
-/* FORM */
-
-/* ELEMENTI NELL' ASIDE */
-
-/* FOOTER */
-
-#container{
-    background-color: #ffffff;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #000;    
-}
 body{   
     margin: 15px;
     background-image: url(../assets/img/sfondo.png);
+    font-family: Poppins, 'Helvetica Neue', sans-serif;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    padding: 15px;
+    background-position: center center;
 }
-
-main{
-    text-align: left;
-    padding-left: auto;
-    padding-right: auto;
-    
-}
+* {box-sizing: border-box;}
+/* HEADER */
 
 header{
+    background-color: rgb(0,160,198);
+    background: linear-gradient(180deg, rgba(0,160,198,1) 0%, rgba(3,109,134,1) 68%);
     text-align: center;
+
     padding-top: 30px;
+}
+#box{
+    height: 170px;
+    border: 1px solid #000;
 }
 
 nav{
@@ -43,23 +30,93 @@ nav{
     margin-right: auto;
 }
 
-#box{
-    background-color: rgb(33, 131, 192);
-    height: 170px;
-    border: 1px solid #000;
-}
-
-picture{
-    margin-top: 5px;
-}
 #h-div{
     margin-top: 0px;
 }
+/* NAV */
 
+#menu a::before{
+    content:"⇒ ";
+}
+#menu a::after{
+    content:" ⇐";
+}
+
+/* MAIN */
+
+main{
+    text-align: left;
+    padding-left: auto;
+    padding-right: auto;
+    
+}
+#container{
+    background-color: #ffffff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #000;    
+}
+
+/* Immagini */
+picture{
+    margin-top: 5px;
+}
 img{
     height: 40px;
     
 }
+
+/* ELEMENTI NEL MAIN - ARTICLE */
+
+/* TABELLE */
+
+li{
+    margin: 3px;
+}
+
+table{
+    border: 1px solid black;
+    margin-bottom: 5px;
+    border-bottom: rgb(77, 77, 222);
+    margin-bottom: 15px;
+    
+}
+
+th{
+    background-color: rgb(86, 86, 228);
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+td{
+    border: 1px solid black;
+}
+
+/* FORM */
+
+form{
+    background-color: rgb(196, 194, 194);
+    text-align: center;
+}
+/* ELEMENTI NELL' ASIDE */
+
+/* FOOTER */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .c-white{
     color: white;
@@ -90,34 +147,11 @@ p{
 
     
 }
+/* Tabelle */
 
-li{
-    margin: 3px;
-}
 
-table{
-    border: 1px solid black;
-    margin-bottom: 5px;
-    border-bottom: rgb(77, 77, 222);
-    margin-bottom: 15px;
-    
-}
+/* Form */
 
-th{
-    background-color: rgb(86, 86, 228);
-    border: 1px solid black;
-    padding: 8px;
-    text-align: left;
-}
-
-td{
-    border: 1px solid black;
-}
-
-form{
-    background-color: rgb(196, 194, 194);
-    text-align: center;
-}
 .titoli{
     font-weight: bold;
     margin-top: 20px;
@@ -132,13 +166,10 @@ iframe{
 code{
     margin-left:5px ;
     margin-right: 5px;
+    
 }
 
-p, h1, li, ul, ol, a address{
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
+
 
 footer{
     background-color: rgb(33, 131, 192);
