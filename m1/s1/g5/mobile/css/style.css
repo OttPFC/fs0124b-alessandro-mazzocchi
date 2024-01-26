@@ -1,7 +1,7 @@
 /* IMPOSTAZIONI GENERALI */
 html {font-size: 62.5%;}
 body{
-    margin:0;
+    border:0;
     color: #393d41;
     font-size: 1.2rem;
     font-family: "Open Sans", sans-serif;
@@ -68,8 +68,11 @@ main{
 
 .sect1{
     text-align: center;
+    
 }
 
+
+/* Images */
 #m-img{
     background-image: url(../assets/images/banner.jpg);
     background-position: center center;   
@@ -79,15 +82,12 @@ main div img{
     border-radius: 50% 50% 50% 50%;
     
 }
-
-#interno{
-    max-width: 200px;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: large;
-    margin-top: 20px;
-
+section img{
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
+
+
 
 /* Section */
 section{
@@ -104,10 +104,14 @@ section p{
     margin-bottom: 15px;
 }
 
-section img{
-    margin-top: 10px;
-    margin-bottom: 10px;
+#interno{
+    max-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: large;
+    margin-top: 20px;
 }
+
 #color-sec{
     background-color: #e22d0e;
     color: white;
@@ -153,10 +157,7 @@ aside{
 }
 /* Footer */
 
-#upper{
-    text-transform: uppercase;
-    
-}
+
 
 footer{
     color: #c8e7f0;
@@ -191,4 +192,7 @@ footer i {
 
 #margin-p{
     padding-top: 20px;
+}
+.under-a{
+    text-decoration: underline;
 }
