@@ -1,26 +1,17 @@
 /* IMPOSTAZIONI GENERALI */
-html {font-size: 62.5%;}
+
 body{
-    min-width:450px ;
-    max-width: 500px;
-    border:0;
+    max-width:500px ;  
+    min-width: 450px;     
     color: #393d41;
     font-size: 1.2rem;
     font-family: "Open Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-variation-settings: "wdth" 100;
-    line-height:1.65 ;
-    
+    line-height:1.65 ;  
 }
 
 h1, h2, h3 ,h4 , h5 , h6{
     color: #25a2c3;
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    font-style: normal;
+    font-family: "Montserrat", sans-serif; 
     line-height: 1.5;
 }
 
@@ -38,16 +29,36 @@ a{
     text-decoration: none;
 }
 
+p{
+    text-indent: 20px;
+}
+/* Images */
+#banner-img{
+    background-image: url(../assets/images/banner.jpg);
+    background-position: center center;  
+    background-size: cover; 
+
+}
+
+main div img{
+    border-radius: 50% 50% 50% 50%;   
+}
+
+section img{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 /* Header */
 header{
     background-color: black;
-    text-align: center;    
-
+    text-align: center;   
 }
+
 header div img {
     padding-top: 20px;
     padding-bottom: 20px;
-    max-width: 100%;
+    max-width: 200%;
     height: auto;
 }
 
@@ -56,47 +67,25 @@ strong{
     padding-bottom: 50px;
 }
 
-
 /* Main */
 main{
     background-color: white;   
     text-align: center;
     font-family: "Open Sans", sans-serif;
+    
 }
-
 
 /* Article */
-
-
-.sect1{
-    text-align: center;
-    
-}
-
-
-/* Images */
-#m-img{
-    background-image: url(../assets/images/banner.jpg);
-    background-position: center center;  
-    background-size: cover; 
-}
-
-main div img{
-    border-radius: 50% 50% 50% 50%;
-    
-}
-section img{
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-
 
 /* Section */
 section{
     padding: 1em;
     margin-bottom: 2em;
-    text-align: center;
+    text-align: center;    
+}
+
+section h1{
+    line-height: 30px;
 }
 
 section h2 {
@@ -104,15 +93,12 @@ section h2 {
 }
 
 section p{
-    margin-bottom: 15px;
+    margin-bottom: 15px;    
 }
 
-#interno{
-    max-width: 200px;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: large;
-    margin-top: 20px;
+#distanza-div{
+    margin-top: 50px;
+    margin-bottom: 20px;
 }
 
 #color-sec{
@@ -123,59 +109,56 @@ section p{
     padding-bottom: 20px;
 }
 
-#dis-div{
-    margin-top: 50px;
-    margin-bottom: 20px;
-}
 section#color-sec p{
     margin-top: 10px;
     font-style: italic;
 }
 
-
-/* Aside */
-aside{
-    min-width: 450px;
-    max-width: 500px;
-    
+section#banner-img div{
+    max-width: min-content;
+    margin-left: auto;
+    margin-right: auto;
     
 }
 
-.b-div{
+/* Aside */
+
+.bordi-div{
     text-align: center;
     border: 0.5px solid #dee1e3; 
-    width: 250px;
+    max-width: min-content;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 20px;
     border-radius: 5px;
 }
-.t-div{
+aside#f-as div h3,p{
     padding-top: 10px;
     padding-bottom: 15px;
 }
 
-#f-as{
+#flex-aside{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 /* Footer */
 
-
-
 footer{
+    min-width: 450px;
+    max-width: 500px;
     color: #c8e7f0;
     background-color: #25a2c3;
     text-align: center;
     padding-top: 20px ;
     padding-bottom: 30px;
-
 }
 
 footer address{
     max-width: max-content;
     margin-left: auto;
     margin-right: auto;
-    border-bottom: 1px solid white;
+    
     padding-bottom: 20px;
 }
 footer a{
@@ -184,17 +167,27 @@ footer a{
 
 footer h1{
     color: white;
+    font-size: x-large;
+    margin-bottom: 15px;
 }
 
-#in-p{
+#inline-p{
     display: inline;
 }
-footer i {
+footer address i {
     margin-right: 0.3em;
 }
 
+footer i{
+    text-align: start;
+}
 #margin-p{
+    max-width: max-content;
+    margin-left: auto;
+    margin-right: auto;
     padding-top: 20px;
+    text-align: center;
+    border-top: 1px solid white;
 }
 .under-a{
     text-decoration: underline;
