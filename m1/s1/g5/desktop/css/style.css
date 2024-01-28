@@ -71,7 +71,8 @@ main{
 
 #m-img{
     background-image: url(../assets/images/banner.jpg);
-    background-position: center;   
+    background-position: center center;  
+    
 }
 
 main div img{

@@ -1,6 +1,8 @@
 /* IMPOSTAZIONI GENERALI */
 html {font-size: 62.5%;}
 body{
+    min-width:450px ;
+    max-width: 500px;
     border:0;
     color: #393d41;
     font-size: 1.2rem;
@@ -75,7 +77,8 @@ main{
 /* Images */
 #m-img{
     background-image: url(../assets/images/banner.jpg);
-    background-position: center center;   
+    background-position: center center;  
+    background-size: cover; 
 }
 
 main div img{
@@ -132,10 +135,9 @@ section#color-sec p{
 
 /* Aside */
 aside{
+    min-width: 450px;
+    max-width: 500px;
     
-    max-width: max-content;
-    margin-left: auto;
-    margin-right: auto;
     
 }
 
@@ -153,7 +155,8 @@ aside{
 
 #f-as{
     display: flex;
-    flex-flow: column wrap;
+    flex-direction: column;
+    align-items: center;
 }
 /* Footer */
 
