@@ -83,7 +83,8 @@ REGOLE
     let name1 = 'john';
     let lower1 = name1.toLowerCase();
     let name2 = 'John';
-    let lower = name2.toLowerCase();
-    console.log(name1 == name2);
+    let lower2 = name2.toLowerCase();
+    console.log(lower1 == lower2);
 */
 
+    
