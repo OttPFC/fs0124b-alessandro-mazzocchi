@@ -1,5 +1,5 @@
 /* ESERCIZIO 1
- Scrivi un algoritmo per trovare il più grande tra due numeri interi.
+Scrivi un algoritmo per trovare il più grande tra due numeri interi.
 */
 
 /* let x = 10;
@@ -13,7 +13,8 @@ if(x > y){console.log(x + " è più grande di " + y);
 */
 
 
-/* if(x != 5){
+/* let x = 7
+if(x != 5){
   console.log('not equal')
 }  */
 
@@ -76,7 +77,6 @@ if (totalShoppingCart * 0.80 > 50){
   Utilizzando un blocco condizionale, crea un algoritmo per ordinarle secondo il loro valore, dal più alto al più basso.
   Alla fine mostra il risultato in console.
 */
-
 
 /* const array = [9,5,7]
 array.sort()
@@ -160,6 +160,9 @@ console.log(me); */
 */
 
 /* let array = [];
+    array.push(1,2,3,4,4,5,6,7,8,9,10);
+
+
 for (let i = 1 ; i <= 10; i++){
   array.push(i);
 }
