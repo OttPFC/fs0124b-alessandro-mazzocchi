@@ -161,12 +161,7 @@ console.log(me); */
 
 /* let array = [];
     array.push(1,2,3,4,4,5,6,7,8,9,10);
-
-
-for (let i = 1 ; i <= 10; i++){
-  array.push(i);
-}
-console.log(array); */
+    console.log(array); */
 
 /* ESERCIZIO 15
   Scrivi del codice per sostituire l'ultimo elemento dell'array, ovvero il valore 10, con il valore 100.
