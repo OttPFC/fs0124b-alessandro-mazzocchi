@@ -104,33 +104,36 @@ const starWarsCharacters = [
 /* ESERCIZIO 1
   Crea una variabile chiamata "charactersNames" e assegnale un array vuoto
 */
+/*
 const charactersNames = []
-
+*/
 /* ESERCIZIO 2
   Utilizzando un ciclo for, cicla l'array "starWarsCharacters".
   Dovrai accedere alla proprietà "name" di ogni oggetto in esso contenuto, e inserirla nell'array "charactersNames" creato precedentemente.
   Come risultato dovresti ottenere qualcosa di simile: ["Luke Skywalker", "C-3PO", "R2-D2", etc..]
 */
-
+/*
 for (let i =  0; i < starWarsCharacters.length; i++ ){
   charactersNames.push(starWarsCharacters[i].name)
 }console.log(charactersNames)
-
+*/
 /* ESERCIZIO 3
   Seguendo i passaggi precedenti crea un nuovo array chiamato "femaleCharacters" e inserisci al suo interno tutti gli oggetti femminili.
 */
-
+/*
 const femaleCharacters = []
 for(let i = 0; i < starWarsCharacters.length; i++){
 if (starWarsCharacters[i].gender == 'female'){
   femaleCharacters.push(starWarsCharacters[i])
 }
 }console.log(femaleCharacters)
-console.log(charactersNames)
+
+*/
 /* ESERCIZIO 4
   Crea un oggetto "eyeColor" che abbia le seguenti proprietà: blue, yellow, brown, red, blue-gray.
   Ad ognuna di queste proprietà assegna come valore un array vuoto.
 */
+/*
 const eyeColor = {
   
     blue : [],
@@ -139,7 +142,7 @@ const eyeColor = {
     red : [],
     blue_gray : [],
   }
-
+*/
 /* ESERCIZIO 5
   Utilizza uno switch statement per inserire uno ad uno gli oggetti dei personaggi di "starWarsCharacters" negli array relativi al colore degli occhi precedentemente creati.
   Ogni personaggio dovrà finire nell'array corrispondente al suo colore degli occhi (al valore della sua proprietà "eye_color").
@@ -217,6 +220,35 @@ if (crewMass < 500){
   Utilizzando gli elementi presenti nell'array "femaleCharacters" rimuovi dall'array "charactersNames" le stringhe corrispondenti a personaggi con lo stesso nome.
   Una volta fatto crea un console.log per controllare la proprietà length di "charactersNames" prima e dopo l'operazione.
 */
+/*
+const charactersNames = []
+
+for (let i =  0; i < starWarsCharacters.length; i++ ){
+  charactersNames.push(starWarsCharacters[i].name)
+}console.log(charactersNames)
+
+
+const femaleCharacters = []
+for(let i = 0; i < starWarsCharacters.length; i++){
+if (starWarsCharacters[i].gender == 'female'){
+  femaleCharacters.push(starWarsCharacters[i])
+}
+}console.log(femaleCharacters)
+
+console.log(charactersNames)
+
+for(let i = 0; i < charactersNames.length; i++){
+  for(let y = 0; y < femaleCharacters.length; y++){
+    if(charactersNames[i] === femaleCharacters[y].name){
+      charactersNames.splice([i],1);
+    }
+  
+}
+}console.log(charactersNames.length)
+*/
+
+
+  
 
 
 
