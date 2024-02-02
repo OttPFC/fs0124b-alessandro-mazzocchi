@@ -1,0 +1,146 @@
+/* Your styles here */
+
+
+body{
+    margin: 0;
+    background-color:#E9EDEE;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Header */
+header{
+    background-color: #131921;
+    min-width: 1366px;
+    max-width: 1920px;
+    
+}
+header img{
+    height: 50px;
+    padding: 20px;
+}
+/* menù */
+.lineaBlu {
+    background-color: #364759;
+    color: white;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+}
+
+li {
+    display: inline;
+}
+
+li a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+/* Main*/
+
+/* Articles */
+
+/* Section */
+section{
+    min-width: 1366px;
+    max-width: 1920px;
+}
+
+.orangeBanner{
+    background-color:#F56600;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+#holidayImage{
+    background-image: url(../images/bg-image.png);
+    background-repeat: repeat;
+    height: 200px;
+    margin-left: 80px;
+    margin-right: 80px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+section#holidayImage p{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: x-large;
+    padding-top: 50px;
+}
+.paragraph{
+    display: block;
+}
+
+.sfondoBianco{
+    background-color: white;
+    margin: 20px;
+    padding-top: 10px;
+    max-width: fit-content;
+    margin: 0 auto;
+    
+}
+section.sfondoBianco div img{
+    border-radius: 10px;
+    margin: 20px;
+}
+
+p, a{
+    display: inline;
+    padding-left: 15px;
+    padding-top: 10px;
+}
+.flexImg{
+    display: inline;
+    align-items: center;
+    margin: 10px;
+    padding-top: 10px;
+}
+
+/* Aside */
+aside{
+    margin-bottom: 25px;
+}
+aside img{
+margin: 20px;
+margin-bottom: 0;
+}
+
+aside div{
+    text-align: center;
+}
+aside div p{
+    display: inline;
+    font-style: bold;
+}
+/* Footer */
+footer{
+    background-color:#222F3F;
+    min-width: 1366px;
+    max-width: 1920px;
+    text-align: center;
+}
+footer div{
+    padding: 20px;
+}
+footer div.lineaBlu a{
+    color: white;
+}
+
+footer img {
+    padding: 40px;
+}
+
+
