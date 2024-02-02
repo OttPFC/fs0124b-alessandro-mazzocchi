@@ -1,8 +1,6 @@
 /* IMPOSTAZIONI GENERALI */
 
-body{
-    max-width:500px ;  
-    min-width: 450px;     
+body{   
     color: #393d41;
     font-size: 1.2rem;
     font-family: "Open Sans", sans-serif;
@@ -145,8 +143,6 @@ aside#f-as div h3,p{
 /* Footer */
 
 footer{
-    min-width: 450px;
-    max-width: 500px;
     color: #c8e7f0;
     background-color: #25a2c3;
     text-align: center;

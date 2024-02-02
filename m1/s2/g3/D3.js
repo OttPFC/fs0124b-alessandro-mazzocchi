@@ -104,9 +104,12 @@ const starWarsCharacters = [
 /* ESERCIZIO 1
   Crea una variabile chiamata "charactersNames" e assegnale un array vuoto
 */
-/*
+
 const charactersNames = []
-*/
+
+let nomi = charactersNames.map(function(names){
+  return names.push(starWarsCharacters.name);
+});console.log(charactersNames);
 /* ESERCIZIO 2
   Utilizzando un ciclo for, cicla l'array "starWarsCharacters".
   Dovrai accedere alla proprietà "name" di ogni oggetto in esso contenuto, e inserirla nell'array "charactersNames" creato precedentemente.
@@ -245,13 +248,10 @@ for(let i = 0; i < charactersNames.length; i++){
   
 }
 }console.log(charactersNames.length)
-*/
-
-
-  
-
 
 
 /* --EXTRA-- ESERCIZIO 10
   Crea una funzionalità che selezioni un elemento casuale dall'array "starWarsCharacters" e ne stampi in console le proprietà in modo discorsivo (a tuo piacimento).
-*/
+*/ 
+
+

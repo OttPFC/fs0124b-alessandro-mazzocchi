@@ -39,12 +39,10 @@ if(a == b){
 */
 
 /* function boundary(n){
-    if(n > 20 && n <= 100){
-        return true;
-    }else if(n == 400){
+    if((n > 20 && n <= 100) || n == 400){
         return true;
     }else{
-        console.log('Lo hai rotto e ora non ci gioco più!')
+        return 'Lo hai rotto e ora non ci gioco più!';
     } 
 }console.log(boundary(409)); */
 
@@ -58,7 +56,7 @@ if(a == b){
 if(parola.startsWith('EPICODE')){
     return parola;
 }else{
-    return "EEPICODE " + parola;
+    return "EPICODE " + parola;
 }
 }console.log(epify('EPIC EDUCATION')) */
 
@@ -137,3 +135,4 @@ if(parola.startsWith('EPICODE')){
     }
     return array
 }console.log(giveMeRandom(7)) */
+
