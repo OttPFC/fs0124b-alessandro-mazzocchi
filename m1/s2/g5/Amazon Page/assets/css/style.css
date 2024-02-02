@@ -76,16 +76,18 @@ section{
     margin-bottom: 30px;
 }
 
+section#holidayImage h3{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-weight: bold;
+    font-size: x-large;
+    padding-top: 80px;
+}
 section#holidayImage p{
     font-family: Arial, Helvetica, sans-serif;
     color: white;
-    font-size: x-large;
+    font-weight: bold;
     padding-top: 20px;
-    margin-top: 20;
-}
-
-.paragraph{
-    display: block;
 }
 
 .sfondoBianco{
@@ -100,6 +102,7 @@ section.sfondoBianco div img{
     border-radius: 10px;
     margin: 20px;
     box-shadow: 8px 8px 19px -1px rgba(0,0,0,0.44);
+    background-position: cover;
 }
 
 section.sfondoBianco p,a{
