@@ -1,5 +1,7 @@
 /* Your styles here */
-
+html {
+    scroll-behavior: smooth;
+}
 
 body{
     margin: 0;
@@ -9,7 +11,7 @@ body{
 
 /* Header */
 header{
-    background-color: #131921;
+    background-color: #222F3F;
     min-width: 1366px;
     max-width: 1920px;
     
@@ -41,7 +43,7 @@ li a {
 }
 
 li a:hover {
-    background-color: #111;
+    background-color:#222F3F;
 }
 /* Main*/
 
@@ -78,8 +80,10 @@ section#holidayImage p{
     font-family: Arial, Helvetica, sans-serif;
     color: white;
     font-size: x-large;
-    padding-top: 50px;
+    padding-top: 20px;
+    margin-top: 20;
 }
+
 .paragraph{
     display: block;
 }
@@ -95,13 +99,22 @@ section#holidayImage p{
 section.sfondoBianco div img{
     border-radius: 10px;
     margin: 20px;
+    box-shadow: 8px 8px 19px -1px rgba(0,0,0,0.44);
 }
 
-p, a{
-    display: inline;
-    padding-left: 15px;
-    padding-top: 10px;
+section.sfondoBianco p,a{
+        display: inline;
+        padding-left: 15px;
+        padding-top: 10px;
+        font-weight: bold;    
 }
+section.sfondoBianco a{
+    color: blue;
+    font-size: small;
+    font-weight:bold;
+}
+
+
 .flexImg{
     display: inline;
     align-items: center;
@@ -123,7 +136,13 @@ aside div{
 }
 aside div p{
     display: inline;
-    font-style: bold;
+    font-weight: bold;
+
+}
+aside div a{
+    color: blue;
+    font-weight: bold;
+    font-size: small;
 }
 /* Footer */
 footer{
