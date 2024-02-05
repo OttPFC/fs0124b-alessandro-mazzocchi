@@ -93,7 +93,7 @@
       /* ESERCIZIO 2
        Scrivi una funzione per aggiungere al titolo della pagina una classe "myHeading"
     */
-const newClass = document.querySelector('h1');
+      const newClass = document.querySelector('h1');
       const addClassToTitle = function () {
         newClass.classList.add('myHeading');
       }
@@ -106,7 +106,7 @@ const newClass = document.querySelector('h1');
       const changePcontent = function () {
         
       }
-        changePcontent()
+        
       /* ESERCIZIO 4
        Scrivi una funzione che cambi la proprietà href di ogni link (tranne quello nel footer) con il valore https://www.google.com
       */
@@ -117,7 +117,13 @@ const newClass = document.querySelector('h1');
        Scrivi una funzione che aggiunga un nuovo elemento lista alla seconda lista non ordinata
     */
 
-      const addToTheSecond = function () {}
+      const addToTheSecond = function () {
+        let secondList = document.querySelector('ul.secondList');
+        let newLi = document.createElement('li');
+        newLi.innerText = 'testo';
+        secondList.append(newLi)
+      }
+      addToTheSecond()
 
       /* ESERCIZIO 6
        Scrivi una funzione che aggiunga un paragrafo al primo div
@@ -144,7 +150,10 @@ const newClass = document.querySelector('h1');
       */
 
       const paintItGreen = function () {
-        
+        const liste = document.querySelectorAll('ul')
+        Array.from(liste).forEach(li => {
+          li.style.backgroundColor = 'green'
+        });
       }
       paintItGreen()
 
@@ -152,7 +161,10 @@ const newClass = document.querySelector('h1');
        Scrivi una funzione che rimuova l'ultima lettera dall'h1 ogni volta che l'utente lo clicca
       */
 
-      const makeItClickable = function () {}
+      const makeItClickable = function () {
+        let lettere = document.querySelector('h1');
+        
+      }
 
       /* ESERCIZIO 10
        Crea una funzione che, al click sul footer, riveli l'URL del link interno come contenuto di un alert()
@@ -165,14 +177,36 @@ const newClass = document.querySelector('h1');
        La tabella avrà 5 elementi e questa struttura: immagine, nome prodotto, quantità, prezzo
     */
 
-      const generateTable = function () {}
-
+      const generateTable = function () {
+        let area = document.querySelector('#tableArea')
+        let newList = document.createElement('ul');
+        let newLi = document.createElement('li')
+        let newLi2 = document.createElement('li')
+        let newLi3 = document.createElement('li')
+        let newLi4 = document.createElement('li')
+        newLi.innerText = ' immagini'
+        newLi2.innerText = ' nome prodotto'
+        newLi3.innerText = ' quantità'
+        newLi4.innerText = ' prezzo'
+        area.append(newList)
+        newList.append(newLi)
+        newList.append(newLi2)
+        newList.append(newLi3)
+        newList.append(newLi4)
+      }
+generateTable()
       /* ESERCIZIO 12
        Crea una funzione che aggiunga una riga alla tabella precedentemente creata e fornisca i dati necessari come parametri
     */
 
-      const addRow = function () {}
-
+      const addRow = function (elemento) {
+        let area = document.querySelector('#tableArea')
+        let list = document.querySelector
+        let newLi = document.createElement('li')
+        newLi.innerText = ' nuovo campo'
+        newList.append(newLi)
+      }
+addRow()
       /* ESERCIZIO 14
       Crea una funzione che nasconda le immagini della tabella quando eseguita
     */
@@ -183,7 +217,10 @@ const newClass = document.querySelector('h1');
       Crea una funzione che cambi il colore del h2 con id "changeMyColor" con un colore random ad ogni click ricevuto
     */
 
-      const changeColorWithRandom = function () {}
+      const changeColorWithRandom = function () {
+        let cambioColore = document.querySelector('#changeMyColor')
+
+      }
     </script>
   </body>
 </html>
