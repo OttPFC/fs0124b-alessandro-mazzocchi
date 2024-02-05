@@ -104,21 +104,27 @@
       */
 
       const changePcontent = function () {
-        
+      let p = document.querySelectorAll('div p');
+      p.forEach(el => el.innerHTML = 'nuovo testo')
       }
+      changePcontent()
         
       /* ESERCIZIO 4
        Scrivi una funzione che cambi la proprietà href di ogni link (tranne quello nel footer) con il valore https://www.google.com
       */
 
-      const changeUrls = function () {}
+      const changeUrls = function () {
+        let links = document.querySelectorAll('a:not(footer a)');
+        links.forEach(l => l.href = 'https://www.google.com' )
+      }
+      changeUrls()
 
       /* ESERCIZIO 5
        Scrivi una funzione che aggiunga un nuovo elemento lista alla seconda lista non ordinata
     */
 
       const addToTheSecond = function () {
-        let secondList = document.querySelector('ul.secondList');
+        let secondList = document.getElementById('secondList');
         let newLi = document.createElement('li');
         newLi.innerText = 'testo';
         secondList.append(newLi)
@@ -142,18 +148,18 @@
     */
 
       const hideFirstUl = function () {
+        document.querySelector('#firstList').remove()
+        //document.querySelector('firstList').style.opacity = '0';
         
       }
-
+      hideFirstUl()
       /* ESERCIZIO 8 
        Scrivi una funzione che renda verde il background di ogni lista non ordinata
       */
 
       const paintItGreen = function () {
         const liste = document.querySelectorAll('ul')
-        Array.from(liste).forEach(li => {
-          li.style.backgroundColor = 'green'
-        });
+        liste.forEach(li => li.style.backgroundColor = 'green');
       }
       paintItGreen()
 
@@ -162,15 +168,32 @@
       */
 
       const makeItClickable = function () {
-        let lettere = document.querySelector('h1');
-        
+        let h1 = document.querySelector('h1');
+        h1.addEventListener('click',function(){
+
+          let substring = h1.innerText.slice(0,-1)
+
+          h1.innerText = substring;
+        })
       }
+      makeItClickable()
 
       /* ESERCIZIO 10
        Crea una funzione che, al click sul footer, riveli l'URL del link interno come contenuto di un alert()
       */
 
-      const revealFooterLink = function () {}
+      const revealFooterLink = function (content) {
+        const footer = document.querySelector('footer')
+        footer.style.cursor = 'pointer'
+        footer.onclick = function () {
+          const link = document.querySelector('footer a')
+          const URL = link.getAttribute('href')
+
+          alert(URL)
+        }
+      }
+      revealFooterLink()
+
 
       /* ESERCIZIO 11
        Crea una funzione che crei una tabella nell'elemento con id "tableArea". 
@@ -179,48 +202,77 @@
 
       const generateTable = function () {
         let area = document.querySelector('#tableArea')
-        let newList = document.createElement('ul');
-        let newLi = document.createElement('li')
-        let newLi2 = document.createElement('li')
-        let newLi3 = document.createElement('li')
-        let newLi4 = document.createElement('li')
-        newLi.innerText = ' immagini'
-        newLi2.innerText = ' nome prodotto'
-        newLi3.innerText = ' quantità'
-        newLi4.innerText = ' prezzo'
+        let newList = document.createElement('table');
+        newList.style.width = '100%'
+        const firstRow = document.createElement('tr')
+        let newTh = document.createElement('th')
+        let newTh2 = document.createElement('th')
+        let newTh3 = document.createElement('th')
+        let newTh4 = document.createElement('th')
+        newTh.innerText = 'immagini'
+        newTh2.innerText = 'nome prodotto'
+        newTh3.innerText = 'quantità'
+        newTh4.innerText = 'prezzo'
         area.append(newList)
-        newList.append(newLi)
-        newList.append(newLi2)
-        newList.append(newLi3)
-        newList.append(newLi4)
+        newList.append(firstRow)
+        newList.append(newTh)
+        newList.append(newTh2)
+        newList.append(newTh3)
+        newList.append(newTh4)
       }
 generateTable()
       /* ESERCIZIO 12
        Crea una funzione che aggiunga una riga alla tabella precedentemente creata e fornisca i dati necessari come parametri
     */
 
-      const addRow = function (elemento) {
-        let area = document.querySelector('#tableArea')
-        let list = document.querySelector
-        let newLi = document.createElement('li')
-        newLi.innerText = ' nuovo campo'
-        newList.append(newLi)
+      const addRow = function (immagini,prodotto,quantita,prezzo) {
+        let table = document.querySelector('table')
+        let newRow = document.createElement('tr')
+        let immagini2 = document.createElement('td')
+        immagini2.innerText = immagini
+        let prodotto2 = document.createElement('td')
+        prodotto.innerText = prodotto
+        let quantita2 = document.createElement('td')
+        quantita.innerText = quantita
+        let prezzo2 = document.createElement('td')
+        prezzo.innerText = prezzo
+        table.append(newRow)
+        newRow.append(immagini2)
+        newRow.append(prodotto)
+        newRow.append(quantita)
+        newRow.append(prezzo)
       }
-addRow()
+      addRow('ciao','ciao','6000','80909')
       /* ESERCIZIO 14
       Crea una funzione che nasconda le immagini della tabella quando eseguita
     */
 
-      const hideAllImages = function () {}
+    const hideAllImages = function () {
+        const images = document.querySelectorAll('img')
+        for (let i = 0; i < images.length; i++) {
+          images[i].style.display = 'none'
+        }
+      }
 
       /* EXTRA ESERCIZIO 15
       Crea una funzione che cambi il colore del h2 con id "changeMyColor" con un colore random ad ogni click ricevuto
     */
 
-      const changeColorWithRandom = function () {
-        let cambioColore = document.querySelector('#changeMyColor')
+    const changeColorWithRandom = function () {
+        let elementToChange = document.getElementById('changeMyColor')
+        elementToChange.onclick = function () {
+          const red = Math.round(Math.random() * 255)
+          const green = Math.round(Math.random() * 255)
+          const blue = Math.round(Math.random() * 255)
 
+          const randomColor = `rgb(${red},${green},${blue})`
+          elementToChange.style.userSelect = 'none' // elimina la possibilità di selezionare il testo, per non nasconderne il colore
+          elementToChange.style.cursor = 'pointer' // cursore a puntatore
+          elementToChange.style.color = randomColor
+        }
       }
+
+      changeColorWithRandom()
     </script>
   </body>
 </html>
