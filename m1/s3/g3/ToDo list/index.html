@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input id="task" type="text" placeholder="Aggiungi alla lista">
+    <input id='aggiungi' type="button" value="Aggiungi">
+    <input id="rimuovi" type="button" value="Rimuovi">
+    
+    
+    
+    
+    <h1 id="titolo"></h1>
+    <div id="lista"></div>
+
+
+
+    <script>
+
+
+function task(){
+    
+
+}
+const invia = document.getElementById('aggiungi')
+invia.addEventListener('click',aggiungi)
+function aggiungi(){
+    let task = document.getElementById('task').value
+    let lista = document.getElementById('lista')
+    let elemento = document.createElement('li')
+    elemento.innerText = task
+    lista.appendChild(elemento)
+}
+
+function inserisciNome(nome) {
+    nome = prompt('Inserisci il nome della Task')
+    let titolo = document.getElementById('titolo');
+    titolo.innerText = nome;
+}
+inserisciNome()
+function creaLista(){
+    let lista = document.getElementById('lista');
+    let creaLista = document.createElement('ul');
+    let elemento = document.createElement('li');
+    elemento.innerText = 'primo';
+    lista.append(elemento);
+    
+}
+
+
+
+    </script>
+</body>
+</html>
