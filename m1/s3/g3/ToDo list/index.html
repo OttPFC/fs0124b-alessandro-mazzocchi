@@ -3,24 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/reset.css">
+    <!-- <link rel="stylesheet" href="./css/reset.css"> -->
     <link rel="stylesheet" href="./css/style.css">
     
     <title>ToDo List</title>
 </head>
-<body >
-    
-    <header id="papi">
-        
-    </header>
-    
-    <main >
-
+<body >    
+    <main class="container" >
+        <div class="box">
         <input id="task" type="text" pattern="[A-Za-z]+" placeholder="Aggiungi alla lista">
-        <input id='aggiungi' type="button" value="Aggiungi">
-        <input id="rimuovi" type="button" value="Rimuovi">
+        <button id='aggiungi' >Aggiungi</button>
         <h1 id="titolo"></h1>
-        <div id="lista"></div>
+                <ul id="lista"></ul>
+            </div>
+        
 
     </main>
 
