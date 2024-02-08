@@ -1,0 +1,25 @@
+
+.numbersTable{
+    background-color: azure;
+    display: flex;
+    flex-flow:row wrap;
+    
+
+}
+div{
+    padding: 5px;
+}
+.btn{
+    background-color: orange;
+    color: #fff;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 15px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+*/
+
+.extracted{
+    background-color: black;
+}
