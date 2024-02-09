@@ -96,13 +96,7 @@ function splitMe(string) {
   return array;
 }
 console.log(splitMe("I love coding"));
-/*
-let array = [];
-  string = string.split(' ');
-  for (let i = 0; i < string.length; i++) {
-    array.push(string[i]);
-  }
-  return array;*/
+
 /* ESERCIZIO 4
   Crea una funzione chiamata "deleteOne" che riceve una stringa e un booleano come parametri.
   Se il valore booleano è true la funzione deve ritornare la stringa senza il primo carattere, altrimenti la deve ritornare senza l'ultimo.
@@ -180,45 +174,27 @@ console.log(rollTheDices(8));
 /* ESERCIZIO 9
   Scrivi una funzione chiamata "howManyDays" che riceve una data come parametro e ritorna il numero di giorni trascorsi da tale data.
 */
-
-function howManyDays(date) {
-  let day = new Date().getDay();
-  let month = new Date().getMonth();
-  let year = new Date().getFullYear();
-  let today = new Date(day, month, year);
-  console.log(today);
-  let difference =  DateDiff('days', date, today); 
-  return difference;
+function howManyDays(startDate) {
+  const currentDate = new Date();
+  const startDay = new Date(startDate);
+  const timeDifference = currentDate - startDay;
+  const daysDifference = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
+  return daysDifference;
 }
+console.log(howManyDays("2024-01-01"));
 
 /* ESERCIZIO 10
   Scrivi una funzione chiamata "isTodayMyBirthday" che deve ritornare true se oggi è il tuo compleanno, falso negli altri casi.
 */
 
-function isTodayMyBirthday() {
-const person = [
-  {
-    name: 'Alessandro',
-    surname: 'Mazzocchi',
-    birthday : '10/07/1997'
-  },
-  {
-    name: 'Alberto',
-    surname: 'Minni',
-    birthday : '20/09/1995'
-  }
-]
-let day = new Date().getDay();
-let month = new Date().getMonth() + 1;
-let year = new Date().getFullYear();
-let formatDate = new Date(day,month,year).toLocaleDateString()
-
-console.log(formatDate);
-
+function isTodayMyBirthday(birthDate) {
+  const today = new Date();
+  const birthDay = new Date(birthDate).getDate();
+  const birthMonth = new Date(birthDate).getMonth();
+  return today.getDate() === birthDay && today.getMonth() === birthMonth;
 }
+console.log(isTodayMyBirthday("1990-02-09"));
 
-
-// Arrays & Oggetti
 
 // NOTA: l'array "movies" usato in alcuni esercizi è definito alla fine di questo file
 const movies = [
@@ -340,14 +316,17 @@ const movies = [
   Scrivi una funzione chiamata "deleteProp" che riceve un oggetto e una stringa come parametri; deve ritornare l'oggetto fornito dopo aver eliminato
   in esso la proprietà chiamata come la stringa passata come secondo parametro.
 */
-
-function DeleteProp(obj,string) {
-
-
-
-
+const obj = {
+  name : 'Pietro',
+  surname : 'Rossi',
+  age : 30,
+  city : 'Roma'
 }
-
+function DeleteProp(obj,string) {
+  delete obj[string]
+  return obj;
+}
+console.log(DeleteProp(obj,'surname'));
 /* ESERCIZIO 12
   Scrivi una funzione chiamata "newestMovie" che trova il film più recente nell'array "movies" fornito.
 */
@@ -377,7 +356,6 @@ console.log(CountMovies(movies));
 */
 
 function onlyTheYears(movies) {
-
   return movies.map(movie => movie.Year);
 }
 console.log(onlyTheYears(movies));
@@ -446,8 +424,7 @@ console.log(removeIndex(2, movies));
 /* ESERCIZIO 20
   Scrivi una funzione per selezionare l'elemento dotato di id "container" all'interno della pagina.
 */
-let container = document.getElementById('container');
-//let container = document.querySelector('#container'); 
+let container = document.getElementById('container'); 
 
 /* ESERCIZIO 21
   Scrivi una funzione per selezionare ogni tag <td> all'interno della pagina.
@@ -548,6 +525,17 @@ function halfTree(n) {
 /* ESERCIZIO 29
   Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
 */
+
+function isItPrime(n){
+
+  for (let i = 2; i <= Math.sqrt(n); i++) {
+    if (n % i === 0) {
+      return false;
+    }
+  }
+  return true;
+}
+console.log(isItPrime(79));
 
 
 /* Questo array viene usato per gli esercizi. Non modificarlo. */
