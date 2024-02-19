@@ -7,6 +7,10 @@
         content: "\22c6\0020";
         margin-left: 10px;
     }
+    div.articoli {
+        background-color:white;
+        border: none;
+    }
 }
 
 @media screen and (min-width: 576px) {
