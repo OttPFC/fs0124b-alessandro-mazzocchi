@@ -1,0 +1,90 @@
+@media screen and (min-width: 320px){
+    header nav li {
+        display: inline;
+        
+    }
+    header nav li a::before {
+        content: "\22c6\0020";
+        margin-left: 10px;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    h1 {
+        font-size: 4rem;
+        word-wrap: break-word;
+    }
+    table{
+        width: 70%;
+        border-collapse: collapse;
+        max-width: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    th, td {
+        padding: 8px;
+        text-align: left;
+        
+    }    
+}
+
+@media screen and (min-width: 768px) {
+
+
+
+
+
+}
+
+@media screen and (min-width: 1220px) {
+    html {font-size: 100%;}
+
+    body{
+        margin-left: 100px;
+        margin-right: 100px;
+        background-image: url ('../img/sfondo.png');
+        background-position: repeat-x center;
+    }
+
+    main{
+        padding-bottom: 0;
+    }
+
+header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+iframe{
+    width: auto;
+}
+section {
+    width: auto;
+}
+.video-news {
+    display: flex;
+    justify-content: center;
+}
+aside h2{
+    display: block;
+    text-align: center;
+}
+
+aside div{
+    width: 100%;
+    
+}
+
+div.articoli {
+    background-color:white;
+    border: none;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+}
