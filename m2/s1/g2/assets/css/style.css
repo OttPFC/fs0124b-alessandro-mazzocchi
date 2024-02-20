@@ -29,7 +29,7 @@ header {
   padding: 2em 1.5em;
   position: sticky;
   top: 0;
-  
+  z-index: 2;
 }
 
 @media screen and (min-width: 800px) {
@@ -126,8 +126,15 @@ h1 {
   line-height: 1.2;
   font-weight: bold;
   letter-spacing: -0.03em;
-  margin-bottom: 0.7em;
+  
 }
+
+.underline-title{
+  z-index: -1;
+  margin-bottom: 0.7em;
+  
+}
+
 
 p,
 address,
@@ -187,16 +194,7 @@ h1 + p {
   }
 }
 
-.underline-title{
-  color: #998FEA;
-  z-index: -1;
 
-  
-
-}
-path {
-  fill:#998FEA ;
-}
 
 .imgLeft {
   margin-right: 20px;
@@ -328,6 +326,7 @@ aside div {
   border: 1px solid #c3c3c3;
   margin-bottom: 1em;
   padding: 1em;
+  position: relative;
 }
 
 @media screen and (min-width: 1200px) {
@@ -406,16 +405,17 @@ footer a {
 
 .icone-laterali{
 
-  position: fixed;
+  position: sticky;
   z-index: 2;
-  left: 90%;
+  
 
 }
 
-aside div i{
-
+.segnalino{
   position: absolute;
-  color: gray;
-  left: 50%;
-  
+  color: rgba(128, 128, 128, 0.292);
+  top: 5px;
+  right:5px ;
+  font-size: 48px;
+
 }
