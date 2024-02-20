@@ -98,6 +98,11 @@ main {
   main {
     padding: 2em;
   }
+  .underline-title{
+    z-index: -1;
+    margin-bottom: 0.7em;
+    margin-left: 500px;    
+  }
 }
 
 section {
@@ -404,10 +409,15 @@ footer a {
 }
 
 .icone-laterali{
+width: 50%;
+height: 50%;
+position: relative;
+z-index: 2;
+}
 
-  position: sticky;
-  z-index: 2;
-  
+div.icone-laterali{
+  width: 100%;
+  height: 100%;
 
 }
 
