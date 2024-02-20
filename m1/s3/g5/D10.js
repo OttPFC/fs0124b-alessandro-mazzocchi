@@ -19,7 +19,7 @@ console.log(sum);
 /* ESERCIZIO B
   Crea una variabile chiamata "random" e assegnaci un numero casuale tra 0 e 20 (deve essere generato dinamicamente a ogni esecuzione).
 */
-let random = Math.floor(Math.random() * 20);
+let random = Math.floor(Math.random() * 21);
 console.log(random);
 
 /* ESERCIZIO C
@@ -90,10 +90,8 @@ console.log(whoIsBigger(10, 19));
 */
 
 function splitMe(string) {
-  const array = [];
   let str = string.split(' ');
-  str.forEach((p) => array.push(p));
-  return array;
+  return str;
 }
 console.log(splitMe("I love coding"));
 
