@@ -409,10 +409,17 @@ footer a {
 }
 
 .icone-laterali{
-width: 50%;
-height: 50%;
-position: relative;
-z-index: 2;
+width: 60px;
+height: 60px;
+position: fixed;
+text-align: center;
+line-height: 60px;
+right: -7px;
+background-color: rgba(255,255,255, 0.6);
+border: 2px solid black;
+border-radius: 5px;
+font-size: 2rem;
+padding: 10px
 }
 
 div.icone-laterali{
