@@ -1,0 +1,88 @@
+body{
+    background-image: url(../assets/img/lavagna.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+
+.container{
+    /*background-image: url(../assets/img/lavagna.avif);
+    background-repeat: no-repeat;
+    background-size: contain;*/
+    
+    max-width: 100%;
+    display:flex ;
+    flex-wrap: wrap;
+    gap: 35px;
+    padding-top: 50px;
+    padding-left: 50px;
+}
+
+.yellow{
+    background-color: #F9FAC8 ;
+    width: 15%;
+    height: 200px;
+    transform: rotate(-5deg);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 5px 5px 5px 5px #34333379;
+    transition:transform 1s;
+    position: sticky;
+}
+.yellow:hover, .purple:hover, .green:hover, .green2:hover{
+    transform: rotate(0deg);
+    transform: scale(1.25);
+    z-index: 2;
+}
+.purple{
+    background-color: #C7C7F2 ;
+    width: 15%;
+    height: 200px;
+    transform: rotate(-8deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 5px 5px 5px 5px #34333379;
+    transition:transform 1s;
+}
+
+.green{
+    background-color: #C7F6C9;
+    width: 15%;
+    height: 200px;
+    transform: rotate(5deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 5px 5px 5px 5px #34333379;
+    transition:transform 1s;
+}
+
+.green2{
+    background-color: #C5F5C8;
+    width: 15%;
+    height: 200px;
+    transform: rotate(3deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 5px 5px 5px 5px #34333379;
+    transition:transform 1s;
+}
+
+.bold{
+    font-weight: bold;
+    font-size: 20px;
+    padding: 20px;
+}
+    
