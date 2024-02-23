@@ -16,7 +16,6 @@ body{
 
 /* Header */
 header{
-    
     background-color: #ffc017;
     padding-top: 10px;
     border-bottom: 1px solid #242424;
@@ -25,6 +24,13 @@ header{
     top: 0;
     z-index: 2;
     
+}
+.nav-colored { 
+    background-color: white;
+}
+
+.nav-default{
+    background-color: #ffc017;
 }
 
 .container{
@@ -55,6 +61,13 @@ a{
     color: white;
     padding: 10px;
     border-radius: 20px;
+}
+
+.b-menu2{
+        background-color: #1A8917;
+        color: white;
+        padding: 10px;
+        border-radius: 20px;
 }
 
 
