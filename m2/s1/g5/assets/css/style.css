@@ -30,8 +30,8 @@ header{
 .container{
     display: flex;
     justify-content: space-between;
-    margin-right: 40px;
-    
+    margin-right: 120px;
+    margin-left: 80px;
 }
 
 .logo{
@@ -88,8 +88,10 @@ div.title span{
     color: white;
     padding: 10px;
     border-radius: 20px;
-    width: 80px;
-    align-self: center;
+    width: 200px;
+    align-self: left;
+    margin-top: 60px;
+    font-size: 20px;
 }
 
 .emme{
@@ -128,13 +130,15 @@ div.title span{
 
 .sesto-div{
     
+    
+    
 }
 .flex-trending{
     display: flex;
     flex-direction: row;
     align-items: center;
     margin-bottom: 16px;
-    
+    margin-left: 50px; /* mi si è spostato tra gli incastri ho dovuto fare cosi */
 }
 
 .flex-trending img{
@@ -285,8 +289,10 @@ position: relative;
 }
 
 .pre-cloud{
-    
+    height: 100%;
     position: sticky;
+    top: 75px;
+    z-index: 2;
     align-items: left;
 
 }
@@ -309,6 +315,45 @@ position: relative;
     margin-bottom: 10px;
 }
 
+.color-green{
+    color:rgb(6, 168, 17);
+    cursor: pointer;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.121);
+}
 
+.color-green:hover{
+    color: #454545;
+}
 
+.flex-footer{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.font-artic2{
+    font-weight: sans-serif;
+    flex-basis: 16.66%;
+    padding-top: 20px;
+}
 
+.tooltip{
+    position: relative;
+    display: inline-block;
+    
+}
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
