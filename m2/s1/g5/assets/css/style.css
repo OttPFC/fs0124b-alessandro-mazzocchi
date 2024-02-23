@@ -1,0 +1,314 @@
+body{
+    margin: 0;
+    padding: 0;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    color: rgba(0,0,0,0.8);
+    position: relative;
+    min-height: 100vh;
+    font-family: "Spectral", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* Header */
+header{
+    
+    background-color: #ffc017;
+    padding-top: 10px;
+    border-bottom: 1px solid #242424;
+    height: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 40px;
+    
+}
+
+.logo{
+    padding-left: 30px;
+    padding-top: 10px;
+}
+
+ul > li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.b-menu{
+    background-color: #242424;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+
+/* Main */
+div.title span{
+    font-size: 100px;
+}
+
+.start{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #ffc017;
+    border-bottom: 1px solid #242424;
+    height: 454px;
+}
+
+.title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    font-size: 30px;
+    padding-top: 10px;
+    padding-left: 30px;
+    margin-left: 100px;
+}
+
+.reading-b{
+    background-color: #242424;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    width: 80px;
+    align-self: center;
+}
+
+.emme{
+    height: 454px;
+}
+
+/* Articles */
+
+.primo-div{
+    display: block;
+}
+.secondo-div{
+    display: flex;
+    justify-content: center;
+
+}
+
+.terzo-div{
+    margin: 0 64px;
+    min-width: 0;
+    max-width: 1192;
+    width: 100%;
+    display: block;
+}
+
+.quarto-div{
+    padding-top: 40px;
+    padding-bottom: 16px;
+    display: block;
+}
+
+.quinto-div{
+    display: block;
+    width: 100%;
+}
+
+.sesto-div{
+    
+}
+.flex-trending{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 16px;
+    
+}
+
+.flex-trending img{
+    margin-right: 10px;
+    display: block;
+    
+    width: 28px;
+    height: 29px;
+}
+.sec-flex{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    padding: 50px;
+    border-bottom: 1px solid #242424;
+}
+
+
+.artic{
+    display: block;
+    flex-grow: 0;
+    flex-basis: 33.33%;
+    
+}
+.numero{
+    display: block;
+    margin-right: 16px;
+    top: 10px;
+    flex: 0 0 auto;
+    width: 40px;
+    font-size: 30px;
+    color: #F2F2F2;
+}
+.interno-box{
+    height: 100%;
+    width: 100%;
+    display: block;
+    
+}
+
+.flex-interno{
+    display: flex;
+    
+    height: 100%;
+    width: 100%;
+    align-items: flex-start;
+    margin-bottom: 16px;
+}
+
+
+.flex-autore{
+    display: flex;
+    flex-direction: column;
+    box-sizing: inherit;
+}
+
+.dentro-articolo{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding-bottom: 10px;
+}
+.dentro-articolo img{
+    width: 20px;
+    height: 20px;
+    padding-right: 5px;
+}
+.data-flex{
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    line-height: 20px;
+    font-weight: 400;
+    padding-top: 10px;
+}
+
+.font-artic{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.pre-art2{
+    display: flex;
+    flex-direction: row;
+}
+
+.art2{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding-right: 100px;
+}
+.div1{
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 40px;
+
+}
+.div2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+.div3{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.div3 > div{
+    padding-top: 10px;
+}
+
+.break-w{
+    width: 400px;
+}
+
+.imma img{
+    width: 200px;
+    margin-left: 30px;
+}
+
+.imma2{
+    width: 20px;
+}
+
+.nuvola{
+    background-color:#F2F2F2;
+    width: 30px;
+    border-radius: 20px;
+    padding: 5px;
+}
+.data-order{
+position: relative;
+}
+
+.star{
+    position: absolute;
+    
+}
+
+.bookmark{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.pre-cloud{
+    
+    position: sticky;
+    align-items: left;
+
+}
+
+.cloud{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 30px;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.tag-nuvola{
+    background-color: #F2F2F2;
+    border-radius: 20px;
+    flex-grow: 0;
+    flex-basis: 33.33%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
+
+
