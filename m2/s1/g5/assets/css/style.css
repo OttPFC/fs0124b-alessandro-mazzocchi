@@ -61,6 +61,7 @@ a{
     color: white;
     padding: 10px;
     border-radius: 20px;
+    cursor: pointer;
 }
 
 .b-menu2{
@@ -68,12 +69,16 @@ a{
         color: white;
         padding: 10px;
         border-radius: 20px;
+        cursor: pointer;
 }
 
 
 /* Main */
-div.title span{
+.title2{
     font-size: 100px;
+    font-weight: bold;
+    padding-bottom: 20px;
+
 }
 
 .start{
@@ -92,8 +97,8 @@ div.title span{
     align-items: left;
     font-size: 30px;
     padding-top: 10px;
-    padding-left: 30px;
-    margin-left: 100px;
+    padding-left: 180px;
+    
 }
 
 .reading-b{
@@ -105,10 +110,15 @@ div.title span{
     align-self: left;
     margin-top: 60px;
     font-size: 20px;
+    cursor: pointer;
 }
-
+.pre-m{
+    height: 454px;
+    
+}
 .emme{
     height: 454px;
+    z-index: 2;
 }
 
 /* Articles */
@@ -141,11 +151,7 @@ div.title span{
     width: 100%;
 }
 
-.sesto-div{
-    
-    
-    
-}
+
 .flex-trending{
     display: flex;
     flex-direction: row;
@@ -355,16 +361,30 @@ position: relative;
     display: inline-block;
     
 }
+
 .tooltip .tooltiptext {
     visibility: hidden;
     width: 120px;
     background-color: black;
     color: #fff;
     text-align: center;
-    padding: 5px 0;
     border-radius: 6px;
+    padding: 5px 0;
     position: absolute;
     z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -60px;
+}
+.tooltip .tooltiptext::after {
+    content: " ";
+    position: absolute;
+    top: 100%; /* At the bottom of the tooltip */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
 }
 
 .tooltip:hover .tooltiptext {
