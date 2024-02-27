@@ -9,3 +9,12 @@
     width: 80px;
     height: 80px;
 }
+
+.article-img2{
+    width: 200px;
+    height: 120px;
+}
+
+.bg-image{
+    background-image: url("https://picsum.photos/200");
+}
