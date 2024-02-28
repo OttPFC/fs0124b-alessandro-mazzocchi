@@ -1,0 +1,221 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+header {
+  background-color: #640FC5;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.logo {
+  width: 60px;
+  border-radius: 10px;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+li {
+  list-style: none;
+  display: inline-block;
+  padding: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+main {
+  background-color: #640FC5;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 3.8rem;
+  padding-bottom: 0.5rem;
+  background-color: #640FC5;
+}
+
+.art {
+  height: 400px;
+}
+
+.flex-sec {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-top: 80px;
+}
+
+.div-margin {
+  width: 50%;
+  animation: hero 5s;
+}
+@keyframes hero {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+.parag {
+  font-size: 1rem;
+  line-height: 2rem;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.flex-container-c {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.img-relative {
+  position: relative;
+  width: 300px;
+}
+
+.image-pc {
+  width: 500px;
+  height: 400px;
+  position: absolute;
+  right: 0.5px;
+  z-index: 1000;
+  animation: image 5s;
+}
+@keyframes image {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  80% {
+    opacity: 1;
+    rotate: 360deg;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+.btn-1, .btn-3, .btn-2 {
+  background-color: #0e6cff;
+  color: white;
+  border: 1px solid black;
+  box-shadow: none;
+  padding: 10px;
+}
+.btn-1:hover, .btn-3:hover, .btn-2:hover {
+  translate: 250px;
+}
+
+.btn-2 {
+  background-color: #ff8700;
+}
+.btn-2:hover {
+  transform: scale(1.5);
+  translate: 0 50px;
+  transition: 3s ease;
+}
+
+.btn-3 {
+  background-color: #4caf50;
+}
+.btn-3:hover {
+  transform: scale(5);
+  rotate: 360deg;
+  transition: 3s;
+  translate: none;
+}
+
+.spazio {
+  margin-top: 100px;
+  width: 100%;
+}
+
+.flex-aside {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+}
+
+.img-as {
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+}
+
+/*# sourceMappingURL=style.css.map */

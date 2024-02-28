@@ -1,0 +1,15 @@
+@mixin coloreDinamico($coloreSfondo){//#640101
+    
+    background-color: $bg-color;
+    
+    @if( lightness($bg-color) > 50){
+
+        color: darken($bg-color,20)
+    }
+}
+
+@mixin title{
+    font-weight: bold;
+    font-size: 3.8rem;
+    padding-bottom: 0.5rem;
+}
