@@ -96,7 +96,7 @@ h1{
     color: $text-color;
     border: 1px solid black;
     box-shadow: none;
-    padding: 10px;
+    @include spacing(padding-bottom, s-30);
     &:hover{
         translate: 250px ;
     }

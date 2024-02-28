@@ -1,0 +1,13 @@
+$spacing-unit: 10px; 
+$spacing: (
+    s-5: $spacing-unit / 2,  
+    s-10: $spacing-unit,     
+    s-15: $spacing-unit * 1.5,
+    s-20: $spacing-unit * 2,   
+    s-30: $spacing-unit * 3,   
+);
+
+
+@mixin spacing($property, $spacing-key) {
+    #{$property}: map-get($spacing, $spacing-key);
+}
