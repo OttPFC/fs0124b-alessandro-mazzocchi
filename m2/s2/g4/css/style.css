@@ -11849,6 +11849,17 @@ textarea.form-control-lg {
   border-radius: 50px 50px 50px 50px;
 }
 
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+}
+
+.p-hero {
+  font-size: 1rem;
+  color: rgb(169, 163, 163);
+}
+
 .color-main {
   background-color: #7550FE;
   height: 500px;
@@ -11856,7 +11867,21 @@ textarea.form-control-lg {
 
 .hero {
   align-items: center;
-  height: 50vh;
+  height: 55vh;
+}
+
+.svg-style {
+  position: relative;
+  background-color: #FFEEDA;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px 50px 50px 50px;
+}
+
+svg {
+  position: absolute;
+  top: 13px;
+  left: 14px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,10 @@
+@mixin title-span{
+    font-size: 2rem;
+    font-weight: bold;
+    color: $title-w;
+}
+
+@mixin p-car{
+    font-size: 1rem;
+    color: $title-p;
+}

@@ -1,9 +1,19 @@
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
 @import './color';
+@import './font';
+@import './variable';
 
 .avatar{
     width: 30px;
     border-radius: 50px 50px 50px 50px;
+}
+
+.title{
+    @include title-span;
+}
+
+.p-hero{
+    @include p-car;
 }
 
 .color-main{
@@ -13,5 +23,13 @@
 
 .hero{
 align-items: center;
-    height: 50vh;
+    height: 55vh;
+}
+
+.svg-style{
+    @include style-svg;
+}
+
+svg{
+    @include svg-ab;
 }
