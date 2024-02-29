@@ -1,0 +1,17 @@
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+@import './color';
+
+.avatar{
+    width: 30px;
+    border-radius: 50px 50px 50px 50px;
+}
+
+.color-main{
+    background-color: $bg-color;
+    height: 500px;
+}
+
+.hero{
+align-items: center;
+    height: 50vh;
+}
