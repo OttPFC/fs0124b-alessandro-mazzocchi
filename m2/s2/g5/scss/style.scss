@@ -1,0 +1,102 @@
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import "./color";
+@import "./font";
+
+body {
+    background-color: $bg-main;
+}
+
+.logo {
+    width: 80px;
+}
+
+li {
+    list-style: none;
+    display: inline-block;
+    padding: 10px;
+}
+
+.men {
+    width: 30px;
+    height: 30px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.c-foot {
+    color: $color-foot-span;
+}
+
+img:hover {
+    scale: 1.2;
+}
+
+.title {
+    @include title;
+}
+
+.btn-student {
+    background-color: $btn-student;
+}
+
+.btn-profile {
+    background-color: $btn-profile;
+}
+
+
+
+
+
+.form-group {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.form-group input {
+    padding: 0;
+    height: initial;
+    width: initial;
+    margin-bottom: 0;
+    display: none;
+    cursor: pointer;
+}
+
+.form-group label {
+    position: relative;
+    cursor: pointer;
+}
+
+.form-group label:before {
+    content: "";
+    background-color: transparent;
+    border: 2px solid $btn-student;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05),
+        inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+    padding: 10px;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.form-group input:checked+label:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 2px;
+    left: 9px;
+    width: 6px;
+    height: 14px;
+    border: solid $btn-student;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.btn-h:hover{
+    background-color: white;
+    color: black;
+}
