@@ -100,3 +100,7 @@ img:hover {
     background-color: white;
     color: black;
 }
+
+.stile{
+    @include font;
+}
