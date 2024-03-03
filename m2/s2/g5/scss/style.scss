@@ -2,12 +2,22 @@
 @import "./color";
 @import "./font";
 
-body {
-    background-color: $bg-main;
-}
+
 
 .logo {
     width: 80px;
+}
+
+.logo-profile {
+    width: 120px;
+}
+
+.avatar {
+    width: 100px;
+}
+
+.lello{
+    width: 20px;
 }
 
 li {
@@ -46,8 +56,14 @@ img:hover {
     background-color: $btn-profile;
 }
 
+.t-button{
+    @include t-button;
+}
 
 
+.btn-student::placeholder{
+    color: white;
+}
 
 
 .form-group {
