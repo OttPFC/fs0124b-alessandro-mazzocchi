@@ -30,6 +30,8 @@
 }
 
 {
+const pet = [];
+    let btn = document.getElementById('sent')
     class Pet {
         constructor(petName, ownerName,species,breed){
             this.petName = petName;
@@ -38,21 +40,70 @@
             this.breed = breed;
         }
 
-        getPet(){    
-            let btn = document.getElementById('sent');        
+        getPet(){
             btn.addEventListener('click', () => {
-                const formElement = document.getElementById('myForm');
-            const formData = new FormData(formElement);
-            const formArray = [];
-            for (const pair of formData.entries()) {
-            formArray.push({ name: pair[0], value: pair[1],name: pair[2], value: pair[3] });
-            return formArray;
-}
+                event.preventDefault();
+                for (let i = 0; i < pet.length; i){
+                    if(pet[i]  ){
+                        
+                    }
+                }
+
+                let petName = document.getElementById('petName').value;
+                let ownerName = document.getElementById('yourName').value;
+                let species = document.getElementById('species').value;
+                let breed = document.getElementById('breed').value;
+                const newPet = new Pet(petName,ownerName,species,breed)
+                pet.push(newPet);
+                console.log(newPet);
+                
+                
+                
             })
         }
     }
-
-    let n = new Pet();
-    n.getPet();
-    
+    let b = new Pet();
+    console.log(b.getPet());
 }
+
+/*
+{
+    const pet = [];
+    let btn = document.getElementById('sent')
+    class Pet {
+        constructor(petName, ownerName,species,breed){
+            this.petName = petName;
+            this.ownerName = ownerName;
+            this.species = species;
+            this.breed = breed;
+        }
+
+        getPet(){
+            btn.addEventListener('click', () => {
+                preventDefault();
+
+                
+                const newPet = {
+                    petName: '',
+                    ownerName: '',
+                    species: '',
+                    breed: ''
+                }
+                let petName = document.getElementById('petName').value;
+                let ownerName = document.getElementById('yourName').value;
+                let species = document.getElementById('species').value;
+                let breed = document.getElementById('breed').value;
+                newPet.petName = petName;
+                newPet.ownerName = ownerName;
+                newPet.species = species;
+                newPet.breed = breed;
+                pet.push(newPet);
+                console.log(newPet);
+                
+            })
+        }
+    }
+    let b = new Pet();
+    console.log(b.getPet());
+}
+*/
