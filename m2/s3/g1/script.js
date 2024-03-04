@@ -43,17 +43,13 @@ const pet = [];
         getPet(){
             btn.addEventListener('click', () => {
                 event.preventDefault();
-                for (let i = 0; i < pet.length; i){
-                    if(pet[i]  ){
-                        
-                    }
-                }
+                
 
                 let petName = document.getElementById('petName').value;
                 let ownerName = document.getElementById('yourName').value;
                 let species = document.getElementById('species').value;
                 let breed = document.getElementById('breed').value;
-                const newPet = new Pet(petName,ownerName,species,breed)
+                const newPet = new Pet(petName,ownerName,species,breed);
                 pet.push(newPet);
                 console.log(newPet);
                 
