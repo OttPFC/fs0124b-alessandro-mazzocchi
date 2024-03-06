@@ -1,3 +1,5 @@
+
+
 const getLibrary = function () {
     fetch(
         'https://striveschool-api.herokuapp.com/books'
@@ -33,7 +35,7 @@ const getLibrary = function () {
             img.classList.add('card-img-top', 'im-card')
             div.classList.add('card-body')
             compra.classList.add('btn', 'btn-success', 'btn-sm', 'me-1')
-            elimina.classList.add('btn', 'btn-danger', 'btn-sm')
+            elimina.classList.add('btn', 'btn-danger', 'btn-sm', 'elimina')
             title.innerText = book.title;
             img.src = book.img;
             price.innerText = 'Prezzo: $' + book.price;
@@ -54,5 +56,18 @@ const getLibrary = function () {
             
         }
     })
+    .then((data)=> {
+        
+    const allTheEditButtons = document.querySelectorAll('.elimina')
+    console.log(allTheEditButtons)
+        allTheEditButtons.forEach((btn) => {
+            btn.addEventListener('click', function (e) {
+                console.log(e.target)
+                e.target.closest('.card ').remove()
+            })
+        })
+    });
+    
 }
 getLibrary();
+
