@@ -1,0 +1,13 @@
+.logo{
+    width: 120px;
+    margin-right: 20px;
+}
+
+.nav-color{
+    background-color: #191919;
+}
+
+.img-prod:hover{
+    transform: scale(1.02);
+    box-shadow: 5px 5px 15px 5px #868686;
+}
