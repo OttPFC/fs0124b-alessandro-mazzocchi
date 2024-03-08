@@ -19,7 +19,6 @@ const fetcher = () => {
             const spinner = document.getElementById("spinner");
             spinner.classList.add("d-none");
             console.log(products);
-            const div = document.getElementById("product-list");
             products.forEach((product) => {
                 let products = generateClone()
                 let img = products.querySelector('.card-img-top')
@@ -29,10 +28,10 @@ const fetcher = () => {
                 let description = products.querySelector('.card-text')
                 description.innerText = product.description;
                 let price = products.querySelector('.price')
-                price.innerText = '$' + product.price;
-                const det = document.querySelectorAll('#details')
-                const mod = document.querySelectorAll('#modify')
-                det.innerHTML = "./details.html?resourceId=" + product._id;
+                price.innerText = product.price + '€';
+                const det = products.querySelector('.details')
+                const mod = products.querySelector('.modify')
+                det.href = "./details.html?resourceId=" + product._id;
                 mod.href = "./back.html?resourceId=" + product._id;
                 document.querySelector('#products').appendChild(products)
                 console.log(product);
