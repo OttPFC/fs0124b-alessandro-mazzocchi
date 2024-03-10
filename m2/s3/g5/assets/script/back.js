@@ -29,6 +29,12 @@ const previewImg = function () {
     }
 };
 
+const resetForm = function () {  
+            const form = document.getElementById("form");         
+            form.reset();
+};
+
+
 /* Creo i metodi da riutilizzare con la fetch */
 const createProduct = function () {
     const method = "POST";
@@ -110,18 +116,22 @@ window.onload = () => {
     preview.addEventListener("click", previewImg);
     const create = document.getElementById("create");
     create.addEventListener("click", createProduct);
+    const reset = document.getElementById("reset");
+    reset.addEventListener("click", resetForm);
     const modify = document.getElementById("modify");
     modify.addEventListener("click", modifyProduct);
     const deleteProd = document.getElementById("delete");
     deleteProd.addEventListener("click", deleteProduct);
     if (resourceId) {
         create.classList.add("d-none");
+        reset.classList.add("d-none");
         fillForm();
     } else {
         const spinner = document.getElementById("spinner");
         spinner.classList.add("d-none");
         modify.classList.add("d-none");
         deleteProd.classList.add("d-none");
+        
         create.classList.add("mx-auto");
     }
 };
@@ -150,3 +160,4 @@ const fillForm = function () {
         })
         .catch((error) => new Error(error));
 };
+
