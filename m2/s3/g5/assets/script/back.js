@@ -30,12 +30,12 @@ const previewImg = function () {
 };
 
 const resetForm = function () {  
-            const form = document.getElementById("form");         
-            form.reset();
+    let form = document.getElementById("form").reset();        
+            
 };
 
 
-/* Creo i metodi da riutilizzare con la fetch */
+/* Metodi da riutilizzare con la fetch */
 const createProduct = function () {
     const method = "POST";
     fetcher(method);
@@ -131,7 +131,6 @@ window.onload = () => {
         spinner.classList.add("d-none");
         modify.classList.add("d-none");
         deleteProd.classList.add("d-none");
-        
         create.classList.add("mx-auto");
     }
 };
