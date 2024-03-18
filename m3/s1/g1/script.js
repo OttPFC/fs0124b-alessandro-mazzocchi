@@ -23,7 +23,7 @@ var User = /** @class */ (function () {
         if (this.credito >= costoTotale) {
             this.credito -= costoTotale;
             this.numeroChiamate += durataMinuti;
-            return ("Chiamata effettuata per ".concat(durataMinuti, " minuti. Credito residuo: ").concat(this.credito, " euro."));
+            return ("Effettuata chiamata di ".concat(durataMinuti, " minuti . Credito residuo: ").concat(this.credito, " euro."));
         }
         else {
             return ("Credito insufficiente per effettuare la chiamata.");
@@ -67,24 +67,32 @@ var chiama = document.querySelector('#chiama');
 var c404 = document.querySelector('#c404');
 var tempo = document.querySelector('#tempo');
 var azzera = document.querySelector('#azzera');
+var news = document.querySelector('#news');
 ricarica.addEventListener('click', function () {
     var importo = document.createElement('div');
-    importo.classList.add('nuovo');
-    document.body.appendChild(importo);
+    importo.classList.add('border-bottom', 'border-dark');
+    news.appendChild(importo);
     importo.innerText = user.ricarica(2);
 });
 chiama.addEventListener('click', function () {
     var durata = document.createElement('div');
-    durata.classList.add('nuovo');
-    document.body.appendChild(durata);
+    durata.classList.add('border-bottom', 'border-dark');
+    news.appendChild(durata);
     durata.innerText = user.chiamata(20);
 });
 tempo.addEventListener('click', function () {
     var durata = document.createElement('div');
-    document.body.appendChild(durata);
+    news.appendChild(durata);
     durata.innerText = user.getNumeroChiamata();
-    azzera.addEventListener('click', function () {
-        user.azzeraChiamate();
-        document.body.removeChild(tempo);
-    });
+});
+azzera.addEventListener('click', function () {
+    var azzerato = document.createElement('div');
+    azzerato.classList.add('border-bottom', 'border-dark');
+    news.appendChild(azzerato);
+    azzerato.innerText = user.azzeraChiamate();
+});
+c404.addEventListener('click', function () {
+    var residuo = document.createElement('div');
+    news.appendChild(residuo);
+    residuo.innerText = user.chiama404();
 });

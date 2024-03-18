@@ -38,12 +38,12 @@ class User implements cotrattoSim{
         if (this.credito >= costoTotale) {
             this.credito -= costoTotale;
             this.numeroChiamate += durataMinuti;
-            return (`Chiamata effettuata per ${durataMinuti} minuti. Credito residuo: ${this.credito} euro.`);
+            return (`Effettuata chiamata di ${durataMinuti} minuti . Credito residuo: ${this.credito} euro.`);
         } else {
             return ("Credito insufficiente per effettuare la chiamata.");
         }
     }
-    chiama404(){
+    chiama404(): string{
         return `Il credito disponibile è di ${this.credito} euro.`
     }
     getNumeroChiamata(){
@@ -83,31 +83,41 @@ const chiama = <HTMLButtonElement>document.querySelector('#chiama')
 const c404 = <HTMLButtonElement>document.querySelector('#c404')
 const tempo = <HTMLButtonElement>document.querySelector('#tempo')
 const azzera = <HTMLButtonElement>document.querySelector('#azzera')
+const news = <HTMLDivElement>document.querySelector('#news')
 
 ricarica.addEventListener('click', () => {
     const importo = document.createElement('div')
-    importo.classList.add('nuovo')
-    document.body.appendChild(importo)
+    importo.classList.add('border-bottom', 'border-dark')
+    news.appendChild(importo)
     importo.innerText = user.ricarica(2)
     
 })
 
 chiama.addEventListener('click', () => {
     const durata = document.createElement('div')
-    durata.classList.add('nuovo')
-    document.body.appendChild(durata)
+    durata.classList.add('border-bottom', 'border-dark')
+    news.appendChild(durata)
     durata.innerText = user.chiamata(20)
     
 })
 
     tempo.addEventListener('click', () => {
     const durata = document.createElement('div')
-    document.body.appendChild(durata)
+    news.appendChild(durata)
     durata.innerText = user.getNumeroChiamata()
-    azzera.addEventListener('click', () => {
-        user.azzeraChiamate()
-        document.body.removeChild(tempo)
-    });
+    
 });
 
+azzera.addEventListener('click', () => {
+    
+    const azzerato = document.createElement('div')
+    azzerato.classList.add('border-bottom', 'border-dark')
+    news.appendChild(azzerato)
+    azzerato.innerText = user.azzeraChiamate()
+});
 
+c404.addEventListener('click', () => {
+    const residuo = document.createElement('div')
+    news.appendChild(residuo)
+    residuo.innerText = user.chiama404()
+});
