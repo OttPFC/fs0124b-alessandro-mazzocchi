@@ -1,26 +1,49 @@
 var User = /** @class */ (function () {
-    function User(nome, cognome, credito, numeroChiamate) {
+    function User(nome, cognome) {
         this.nome = nome;
         this.cognome = cognome;
-        this.credito = credito;
-        this.numeroChiamate = numeroChiamate;
+        this.credito = 0;
+        this.numeroChiamate = 0;
     }
     User.prototype.ricarica = function (importo) {
-        return "La ricarica di ".concat(importo, " euro \u00E8 stata effettuata.\nIl suo credito disponibile \u00E8 ora di ").concat(this.credito + importo, " euro.\nGrazie.");
+        if (importo <= 0) {
+            return "L'importo di ricarica deve essere positivo.";
+        }
+        var limiteMassimoCredito = 100;
+        var creditoDopoRicarica = this.credito + importo;
+        if (creditoDopoRicarica > limiteMassimoCredito) {
+            return "La ricarica non pu\u00F2 superare il limite massimo di ".concat(limiteMassimoCredito, " euro.");
+        }
+        this.credito += importo;
+        return "La ricarica di ".concat(importo, " euro \u00E8 stata effettuata. Il nuovo credito disponibile \u00E8 di ").concat(this.credito, " euro. Grazie.");
     };
-    User.prototype.chiamata = function () {
+    User.prototype.chiamata = function (durataMinuti) {
+        var costoMinuto = 0.20;
+        var costoTotale = costoMinuto * durataMinuti;
+        if (this.credito >= costoTotale) {
+            this.credito -= costoTotale;
+            this.numeroChiamate += durataMinuti;
+            console.log("Chiamata effettuata per ".concat(durataMinuti, " minuti. Credito residuo: ").concat(this.credito, " euro."));
+        }
+        else {
+            console.log("Credito insufficiente per effettuare la chiamata.");
+        }
     };
     User.prototype.chiama404 = function () {
         return "Il credito disponibile \u00E8 di ".concat(this.credito, " euro.");
     };
-    User.prototype.getNumeroChiamata = function () { };
+    User.prototype.getNumeroChiamata = function () {
+        return this.numeroChiamate;
+    };
     User.prototype.azzeraChiamate = function () {
         this.numeroChiamate = 0;
         return "Il numero di chiamate effettuate \u00E8 stato riportato a ".concat(this.numeroChiamate, " . Grazie.");
     };
     return User;
 }());
-var user = new User('Giuseppe', 'Rossi', 20, 90);
+var user = new User('Giuseppe', 'Rossi');
 console.log(user.ricarica(90));
 console.log(user.chiama404());
 console.log(user.azzeraChiamate());
+console.log(user.chiamata(20));
+console.log(user.getNumeroChiamata());
