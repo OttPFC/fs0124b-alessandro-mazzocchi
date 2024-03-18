@@ -38,9 +38,9 @@ class User implements cotrattoSim{
         if (this.credito >= costoTotale) {
             this.credito -= costoTotale;
             this.numeroChiamate += durataMinuti;
-            console.log(`Chiamata effettuata per ${durataMinuti} minuti. Credito residuo: ${this.credito} euro.`);
+            return (`Chiamata effettuata per ${durataMinuti} minuti. Credito residuo: ${this.credito} euro.`);
         } else {
-            console.log("Credito insufficiente per effettuare la chiamata.");
+            return ("Credito insufficiente per effettuare la chiamata.");
         }
     }
     chiama404(){
@@ -55,6 +55,7 @@ class User implements cotrattoSim{
     }
 
     azzeraChiamate(){
+        this.numeroChiamate = 0;
         if(this.numeroChiamate == 0){
             return `Il numero di chiamate effettuate è stato azzerato. Grazie.`
         }else{
@@ -73,9 +74,9 @@ console.log(user.chiama404())
 console.log(user.chiamata(20))
 console.log(user.chiama404())
 console.log(user.chiamata(80))
-//console.log(user.azzeraChiamate())
 console.log(user.getNumeroChiamata())
-
+console.log(user.azzeraChiamate())
+console.log(user.getNumeroChiamata())
 
 const ricarica = <HTMLButtonElement>document.querySelector('#ricarica')
 const chiama = <HTMLButtonElement>document.querySelector('#chiama')
@@ -88,20 +89,25 @@ ricarica.addEventListener('click', () => {
     importo.classList.add('nuovo')
     document.body.appendChild(importo)
     importo.innerText = user.ricarica(2)
-    azzera.addEventListener('click', () => {
-        user.azzeraChiamate()
-        document.body.removeChild(importo)
-    });
+    
 })
 
-/* 
 chiama.addEventListener('click', () => {
+    const durata = document.createElement('div')
+    durata.classList.add('nuovo')
+    document.body.appendChild(durata)
+    durata.innerText = user.chiamata(20)
+    
+})
+
+    tempo.addEventListener('click', () => {
     const durata = document.createElement('div')
     document.body.appendChild(durata)
     durata.innerText = user.getNumeroChiamata()
-    tempo.addEventListener('click', () => {
-        user.chiama404()
-        document.body.removeChild(durata)
+    azzera.addEventListener('click', () => {
+        user.azzeraChiamate()
+        document.body.removeChild(tempo)
     });
 });
-*/
+
+

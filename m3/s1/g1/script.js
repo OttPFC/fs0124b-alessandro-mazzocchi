@@ -23,10 +23,10 @@ var User = /** @class */ (function () {
         if (this.credito >= costoTotale) {
             this.credito -= costoTotale;
             this.numeroChiamate += durataMinuti;
-            console.log("Chiamata effettuata per ".concat(durataMinuti, " minuti. Credito residuo: ").concat(this.credito, " euro."));
+            return ("Chiamata effettuata per ".concat(durataMinuti, " minuti. Credito residuo: ").concat(this.credito, " euro."));
         }
         else {
-            console.log("Credito insufficiente per effettuare la chiamata.");
+            return ("Credito insufficiente per effettuare la chiamata.");
         }
     };
     User.prototype.chiama404 = function () {
@@ -41,6 +41,7 @@ var User = /** @class */ (function () {
         }
     };
     User.prototype.azzeraChiamate = function () {
+        this.numeroChiamate = 0;
         if (this.numeroChiamate == 0) {
             return "Il numero di chiamate effettuate \u00E8 stato azzerato. Grazie.";
         }
@@ -58,7 +59,8 @@ console.log(user.chiama404());
 console.log(user.chiamata(20));
 console.log(user.chiama404());
 console.log(user.chiamata(80));
-//console.log(user.azzeraChiamate())
+console.log(user.getNumeroChiamata());
+console.log(user.azzeraChiamate());
 console.log(user.getNumeroChiamata());
 var ricarica = document.querySelector('#ricarica');
 var chiama = document.querySelector('#chiama');
@@ -70,19 +72,19 @@ ricarica.addEventListener('click', function () {
     importo.classList.add('nuovo');
     document.body.appendChild(importo);
     importo.innerText = user.ricarica(2);
+});
+chiama.addEventListener('click', function () {
+    var durata = document.createElement('div');
+    durata.classList.add('nuovo');
+    document.body.appendChild(durata);
+    durata.innerText = user.chiamata(20);
+});
+tempo.addEventListener('click', function () {
+    var durata = document.createElement('div');
+    document.body.appendChild(durata);
+    durata.innerText = user.getNumeroChiamata();
     azzera.addEventListener('click', function () {
         user.azzeraChiamate();
-        document.body.removeChild(importo);
+        document.body.removeChild(tempo);
     });
 });
-/*
-chiama.addEventListener('click', () => {
-    const durata = document.createElement('div')
-    document.body.appendChild(durata)
-    durata.innerText = user.getNumeroChiamata()
-    tempo.addEventListener('click', () => {
-        user.chiama404()
-        document.body.removeChild(durata)
-    });
-});
-*/
