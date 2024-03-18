@@ -33,17 +33,56 @@ var User = /** @class */ (function () {
         return "Il credito disponibile \u00E8 di ".concat(this.credito, " euro.");
     };
     User.prototype.getNumeroChiamata = function () {
-        return this.numeroChiamate;
+        if (this.numeroChiamate == 0) {
+            return "Non hai ancora chiamate.";
+        }
+        else {
+            return "Hai ".concat(this.numeroChiamate, " minuti di chiamata effettuati.");
+        }
     };
     User.prototype.azzeraChiamate = function () {
-        this.numeroChiamate = 0;
-        return "Il numero di chiamate effettuate \u00E8 stato riportato a ".concat(this.numeroChiamate, " . Grazie.");
+        if (this.numeroChiamate == 0) {
+            return "Il numero di chiamate effettuate \u00E8 stato azzerato. Grazie.";
+        }
+        else {
+            return 'Qualcosa è anadato storto, prova a ripetere l operazione fra qualche minuto.';
+        }
     };
     return User;
 }());
 var user = new User('Giuseppe', 'Rossi');
-console.log(user.ricarica(90));
+console.log(user.ricarica(30));
 console.log(user.chiama404());
-console.log(user.azzeraChiamate());
+console.log(user.ricarica(20));
+console.log(user.chiama404());
 console.log(user.chiamata(20));
+console.log(user.chiama404());
+console.log(user.chiamata(80));
+//console.log(user.azzeraChiamate())
 console.log(user.getNumeroChiamata());
+var ricarica = document.querySelector('#ricarica');
+var chiama = document.querySelector('#chiama');
+var c404 = document.querySelector('#c404');
+var tempo = document.querySelector('#tempo');
+var azzera = document.querySelector('#azzera');
+ricarica.addEventListener('click', function () {
+    var importo = document.createElement('div');
+    importo.classList.add('nuovo');
+    document.body.appendChild(importo);
+    importo.innerText = user.ricarica(2);
+    azzera.addEventListener('click', function () {
+        user.azzeraChiamate();
+        document.body.removeChild(importo);
+    });
+});
+/*
+chiama.addEventListener('click', () => {
+    const durata = document.createElement('div')
+    document.body.appendChild(durata)
+    durata.innerText = user.getNumeroChiamata()
+    tempo.addEventListener('click', () => {
+        user.chiama404()
+        document.body.removeChild(durata)
+    });
+});
+*/

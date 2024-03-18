@@ -31,7 +31,7 @@ class User implements cotrattoSim{
         return `La ricarica di ${importo} euro è stata effettuata. Il nuovo credito disponibile è di ${this.credito} euro. Grazie.`;
     }
     
-    chiamata(durataMinuti: number): void {
+    chiamata(durataMinuti: number) {
         const costoMinuto = 0.20;
         const costoTotale = costoMinuto * durataMinuti;
 
@@ -47,22 +47,61 @@ class User implements cotrattoSim{
         return `Il credito disponibile è di ${this.credito} euro.`
     }
     getNumeroChiamata(){
-        return this.numeroChiamate
+        if(this.numeroChiamate == 0){
+            return "Non hai ancora chiamate."
+        }else{
+            return `Hai ${this.numeroChiamate} minuti di chiamata effettuati.`
+        }
     }
 
     azzeraChiamate(){
-        this.numeroChiamate = 0;
-        return `Il numero di chiamate effettuate è stato riportato a ${this.numeroChiamate} . Grazie.`
+        if(this.numeroChiamate == 0){
+            return `Il numero di chiamate effettuate è stato azzerato. Grazie.`
+        }else{
+            return 'Qualcosa è anadato storto, prova a ripetere l operazione fra qualche minuto.'
+        }
 
     }
 }
 
 const user = new User('Giuseppe', 'Rossi')
 
-console.log(user.ricarica(90))
-
+console.log(user.ricarica(30))
 console.log(user.chiama404())
-
-console.log(user.azzeraChiamate())
+console.log(user.ricarica(20))
+console.log(user.chiama404())
 console.log(user.chiamata(20))
+console.log(user.chiama404())
+console.log(user.chiamata(80))
+//console.log(user.azzeraChiamate())
 console.log(user.getNumeroChiamata())
+
+
+const ricarica = <HTMLButtonElement>document.querySelector('#ricarica')
+const chiama = <HTMLButtonElement>document.querySelector('#chiama')
+const c404 = <HTMLButtonElement>document.querySelector('#c404')
+const tempo = <HTMLButtonElement>document.querySelector('#tempo')
+const azzera = <HTMLButtonElement>document.querySelector('#azzera')
+
+ricarica.addEventListener('click', () => {
+    const importo = document.createElement('div')
+    importo.classList.add('nuovo')
+    document.body.appendChild(importo)
+    importo.innerText = user.ricarica(2)
+    azzera.addEventListener('click', () => {
+        user.azzeraChiamate()
+        document.body.removeChild(importo)
+    });
+})
+
+/* 
+chiama.addEventListener('click', () => {
+    const durata = document.createElement('div')
+    document.body.appendChild(durata)
+    durata.innerText = user.getNumeroChiamata()
+    tempo.addEventListener('click', () => {
+        user.chiama404()
+        document.body.removeChild(durata)
+    });
+});
+*/
