@@ -68,11 +68,13 @@ var c404 = document.querySelector('#c404');
 var tempo = document.querySelector('#tempo');
 var azzera = document.querySelector('#azzera');
 var news = document.querySelector('#news');
+var inputRicarica = document.querySelector('#inputRicarica');
 ricarica.addEventListener('click', function () {
     var importo = document.createElement('div');
     importo.classList.add('border-bottom', 'border-dark');
     news.appendChild(importo);
-    importo.innerText = user.ricarica(2);
+    var importoRicarica = parseFloat(inputRicarica.value);
+    importo.innerText = user.ricarica(importoRicarica);
 });
 chiama.addEventListener('click', function () {
     var durata = document.createElement('div');

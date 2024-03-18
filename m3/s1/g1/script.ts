@@ -84,12 +84,14 @@ const c404 = <HTMLButtonElement>document.querySelector('#c404')
 const tempo = <HTMLButtonElement>document.querySelector('#tempo')
 const azzera = <HTMLButtonElement>document.querySelector('#azzera')
 const news = <HTMLDivElement>document.querySelector('#news')
-
+const inputRicarica = document.querySelector('#inputRicarica');
 ricarica.addEventListener('click', () => {
     const importo = document.createElement('div')
     importo.classList.add('border-bottom', 'border-dark')
     news.appendChild(importo)
-    importo.innerText = user.ricarica(2)
+    
+    const importoRicarica = parseFloat(inputRicarica.value);
+    importo.innerText = user.ricarica(importoRicarica);
     
 })
 
