@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Post } from '../post';
+import { iPost } from '../post';
 
 @Component({
   selector: 'app-home',
@@ -8,11 +8,14 @@ import { Post } from '../post';
 })
 export class HomeComponent implements OnInit {
 
-  postArticle:Post[] = [];
-
-  constructor() {}
+  postArticle:iPost[] = [];
+  postArticle2:iPost[] = [];
 
   ngOnInit(): void {
+
+    fetch('../assets/db.json')
+      .then(art => art.json())
+      .then(data => this.postArticle2 = data.posts);
 
     fetch('../assets/db.json')
       .then(art => art.json())
