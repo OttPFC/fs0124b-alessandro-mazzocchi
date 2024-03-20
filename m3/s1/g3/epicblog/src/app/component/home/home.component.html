@@ -1,0 +1,46 @@
+<main>
+    <section>
+        <article>
+            <div class="container">
+                <div class="border-top border-bottom border-2 border-dark my-3">
+                    <p class="display-6 border-bottom border-2 border-dark">In evidenza</p>
+                    <div class="row my-2">
+                        <div class="col-12">
+                            <div class="card my-2">
+                                <img src="https://picsum.photos/200/300" class="card-img-top" height="300px" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{postArticle[0].title}}</h5>
+                                    <p class="card-text">{{postArticle[0].body}}</p>
+                                    <a href="#" class="">{{postArticle[0].tags}}</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <section>
+        <div class="container">
+            <div>
+                <p>Potrebbero interessarti anche </p>
+
+                <div class="row my-2">
+                    <div class="col-3" *ngFor="let data of postArticle.slice(0,4);">
+                        <div class="card my-2">
+                            <img src="https://picsum.photos/200" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">{{data.title}}</h5>
+                                <p class="card-text">{{data.body}}</p>
+                                <a href="#" class="">{{data.tags}}</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+</main>
