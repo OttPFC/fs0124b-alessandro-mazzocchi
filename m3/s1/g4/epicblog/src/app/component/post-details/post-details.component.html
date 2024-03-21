@@ -1,1 +1,19 @@
-<p>post-details works!</p>
+<section>
+    <div class="container">
+        <div>
+            <div class="row ">
+                <div class="col-3 " *ngFor="let data of postArticles2" >
+                    <div id="{{data.id}}" class="card h-100 overflow-auto">
+                        <img src="https://picsum.photos/200/300?grayscale" class="card-img-top" height="300px" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">{{data.title}}</h5>
+                            <a href="#" class="">{{data.tags}}</a>
+                            <p class="card-text ">{{data.body}}</p>
+                            <button class="btn btn-primary" (click)="goToPostDetails(data.id)">Vai all'articolo</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

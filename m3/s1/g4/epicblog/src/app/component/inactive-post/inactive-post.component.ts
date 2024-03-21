@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { iPost } from '../Model/post';
-import { PostServiceService } from '../../post-service.service';
+import { Router } from '@angular/router';
+
 
 
 @Component({
@@ -11,6 +12,8 @@ import { PostServiceService } from '../../post-service.service';
 export class InactivePostComponent {
 
   postArticles2: iPost[] = [];
+  postArticles: iPost[] = [];
+  constructor(private router: Router) {}
 
 
 
@@ -21,5 +24,13 @@ export class InactivePostComponent {
       .then(data => {
         this.postArticles2 = data.posts.filter((art: { active: boolean; }) => !art.active)
       })
+  
+    }
+  goToPostDetails(id: number) {
+    fetch('../assets/db.json')
+      .then(art => art.json())
+      .then(data => this.postArticles = data.posts);
+    this.router.navigate(['/post-details', id]);
   }
+
 }
