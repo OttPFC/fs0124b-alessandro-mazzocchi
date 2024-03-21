@@ -1,0 +1,49 @@
+<main>
+    <section>
+        <article>
+            <div class="container">
+                <div class="border-top border-bottom border-2 border-dark my-3">
+                    <p class="display-6 border-bottom border-2 border-dark">In evidenza</p>
+                    <div class="row my-2">
+                        <div class="col-12">
+                            <div class="card my-2 text-center">
+                                <div class="w-25 mx-auto ">
+
+                                    <img src="https://picsum.photos/200/300" class="card-img-top mt-3  " height="300px" alt="...">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">{{postArticle2[0].title}}</h5>
+                                    <a href="#" class="">{{postArticle2[0].tags}}</a>
+                                    <p class="card-text">{{postArticle2[0].body}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <section>
+        <div class="container">
+            <div>
+                <p>Potrebbero interessarti anche </p>
+
+                <div class="row my-2">
+                    <div class="col-3" *ngFor="let data of postArticle.slice(0,4);">
+                        <div class="card my-2 h-75 overflow-auto">
+                            <img src="https://picsum.photos/200/300?grayscale" class="card-img-top" height="300px" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">{{data.title}}</h5>
+                                <a href="#" class="">{{data.tags}}</a>
+                                <p class="card-text ">{{data.body}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+</main>
