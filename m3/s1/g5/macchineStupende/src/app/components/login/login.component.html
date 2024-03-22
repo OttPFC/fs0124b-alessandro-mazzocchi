@@ -2,26 +2,23 @@
     <div class="container text-center ">
         <div class="">
             <div class="d-flex flex-column justify-content-center mt-5 gap-3">
-    
                 <div class="d-flex flex-column text-center">
                     <label class="" for="userId">User id:</label>
                     <div>
-                        <input type="text" id="userId" placeholder="CapitanoMike" [(ngModel)]= userId (keyup.enter)="gestAuth()" >
+                        <input type="text" id="userId" placeholder="Suggerimt: CapitanoMike" [(ngModel)]= userId (keyup.enter)="gestAuth()" >
                     </div>
                 </div>
                     <div class="d-flex flex-column text-center">
                         <label for="password">Password</label>
                         <div>
-                            <input type="password" id="password" placeholder="Argh" [(ngModel)]= password (keyup.enter)="gestAuth()">
+                            <input type="password" id="password" placeholder="Suggerimento: Argh" [(ngModel)]= password (keyup.enter)="gestAuth()">
                         </div>
                     </div>
             </div>
             <div class="text-center"> 
                 <button class="btn btn-warning my-2" (click) = gestAuth() >Entra</button>
             </div>
-    
         </div>
-    
     </div>
 </main>
 
