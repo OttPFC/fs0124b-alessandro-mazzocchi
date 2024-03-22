@@ -20,7 +20,7 @@ component: AudiComponent
   component: FiatComponent 
 },
 {
-path: 'details',
+path: 'details/:model',
 component: DetailsComponent
 },
 {

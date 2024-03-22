@@ -12,19 +12,10 @@ export class CarService {
     .then(res => res.json())
     .then((res:iCar[]) => res)
   }
-  getAvailableCars():Promise<iCar[]>{
-    return this.getAllCars()
-    .then(res => res.filter(p => p.available))
-  }
 
-  getUnvailableCars():Promise<iCar[]>{
+  getCarsById(carModel:string):Promise<iCar | undefined>{
     return this.getAllCars()
-    .then(res => res.filter(p => !p.available))
-  }
-
-  getCarsById(model:string):Promise<iCar | undefined>{
-    return this.getAllCars()
-    .then(res => res.find(p => p.model == model))
+    .then(res => res.find(p => p.model === carModel))
   }
 
   getBrandCars(homeBrand:string):Promise<iCar[]>{

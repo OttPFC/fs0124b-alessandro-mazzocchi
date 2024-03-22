@@ -1,0 +1,47 @@
+<main>
+    <div class="container">
+        <div class="my-3" *ngFor="let car of cars.slice(0,4);">
+            <div class="d-flex gap-4">
+                <p>Questa la splendida: <span class="fw-bold fs-4">{{car.brand}} {{car.model}}</span></p>
+                <img src="{{car.brandLogo}}" width="40px" height="40px" class="p-0" alt="">
+            </div>
+            <div class="row my-2">
+                <div class="col-3" >
+                    
+                    <div class="card my-2  ">
+                        <img src="https://picsum.photos/200/300?grayscale" class="card-img-top" height="300px"
+                            alt="...">
+                        <div class="card-body position-relative" >
+                            <span class="badge text-bg-secondary position-absolute bottom-10 end-0" [ngClass]="{
+                                'bg-danger': !car.available,
+                                'bg-success': car.available
+                            }">Disponibile</span>
+                            <h5 class="card-title">Brand: {{car.brand}}</h5>
+                            <h6 class="card-text ">Modello: {{car.model}}</h6>
+                            <p class="">Prezzo: {{car.price}}$</p>
+                            <p class="card-text ">Anno: {{car.year}}</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-6">
+                    <h4>Le Marmotte</h4>
+                    <p>Marmota Blumenbach, 1779 è il genere dell'ordine dei Roditori (Rodentia) cui appartengono
+                        le quindici specie di marmotte, scoiattoli di terra (Marmotini) lunghi fino a 50 centimetri 
+                        diffusi in Eurasia e in America del Nord. Sono principalmente abitanti delle steppe fredde. 
+                        La marmotta delle Alpi, che oggi vive solo nelle zone montuose al di sopra della linea degli alberi,
+                        durante l'era glaciale del Pleistocene si incontrava in tutte le pianure europee dai Pirenei all'Ucraina. 
+                        Era invece assente dalle Alpi, che erano ricoperte da uno spesso strato di ghiaccio. Tuttavia, con la fine 
+                        dell'era glaciale, solo i luoghi d'alta montagna delle Alpi hanno offerto a questa specie un habitat adatto 
+                        (si parla pertanto di relitto glaciale). Le marmotte possono vivere fino a 15 anni.</p>
+                        <audio controls autoplay class="d-none" >
+                            <source src="assets/audio/untitled.ogg" type="audio/ogg">
+                            <source src="assets/audio/untitled.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+                </div>
+                
+            </div>
+            </div>
+    </div>
+</main>

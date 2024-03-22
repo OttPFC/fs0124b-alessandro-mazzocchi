@@ -1,25 +1,28 @@
-<div class="container">
-    <div>
-        <p class="">Le nostre Automobili</p>
+<section>
+    <div class="container">
+        <div class="my-3">
+            <p class="">Le nostre Automobili</p>
 
-        <div class="row my-2">
-            <div class="col-3" *ngFor="let car of cars.slice(0,4);">
-                <div class="card my-2  ">
-                    <img src="https://picsum.photos/200/300?grayscale" class="card-img-top" height="300px" alt="...">
-                    <div class="card-body" 
-                    [ngClass]="{
-                        'bg-danger': !car.available,
-                        'bg-success': car.available
-                    }">
-                        <h5 class="card-title"
-                        >Brand: {{car.brand}}</h5>
-                        <h6 class="card-text ">Modello: {{car.model}}</h6>
-                        <p  class="">Prezzo: {{car.price}}$</p>
-                        <p class="card-text ">Anno: {{car.year}}</p>
-                        <a id="" href=""><button class="btn btn-primary">Vai all'articolo</button></a>
+            <div class="row my-2">
+                <div class="col-3" *ngFor="let car of cars.slice(0,4);">
+                    <div class="card my-2  ">
+                        <img src="https://picsum.photos/200/300?grayscale" class="card-img-top" height="300px"
+                            alt="...">
+                        <div class="card-body position-relative" >
+                            <span class="badge text-bg-secondary position-absolute bottom-10 end-0" [ngClass]="{
+                                'bg-danger': !car.available,
+                                'bg-success': car.available
+                            }">Disponibile</span>
+                            <h5 class="card-title">Brand: {{car.brand}}</h5>
+                            <h6 class="card-text ">Modello: {{car.model}}</h6>
+                            <p class="">Prezzo: {{car.price}}$</p>
+                            <p class="card-text ">Anno: {{car.year}}</p>
+                            <a id="" [routerLink]="['/details', car.model]"><button class="btn btn-primary">Vai
+                                    all'articolo</button></a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</section>
