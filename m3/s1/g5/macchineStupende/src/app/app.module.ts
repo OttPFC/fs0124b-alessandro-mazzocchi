@@ -11,6 +11,8 @@ import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './main-components/navbar/navbar.component';
 import { FooterComponent } from './main-components/footer/footer.component';
 import { DetailsComponent } from './components/details/details.component';
+import { LoginComponent } from './components/login/login.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,11 +23,13 @@ import { DetailsComponent } from './components/details/details.component';
     FordComponent,
     FiatComponent,
     HomeComponent,
-    DetailsComponent
+    DetailsComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

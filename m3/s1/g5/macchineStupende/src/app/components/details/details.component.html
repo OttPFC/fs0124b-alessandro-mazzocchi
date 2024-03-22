@@ -6,13 +6,14 @@
                 <img src="{{car.brandLogo}}" width="40px" height="40px" class="p-0" alt="">
             </div>
             <div class="row my-2">
-                <div class="col-3" >
+                <div class="col-12 col-md-6 col-lg-3" >
                     
                     <div class="card my-2  ">
-                        <img src="{{car.modelImage}}" class="card-img-top" height="300px"
+                        <img src="{{car.modelImage}}" class="card-img-top detail-car" 
                             alt="...">
                         <div class="card-body position-relative" >
-                            <span class="badge text-bg-secondary position-absolute bottom-10 end-0" [ngClass]="{
+                            <span class="badge text-bg-secondary position-absolute bottom-10 end-0" 
+                            [ngClass]="{
                                 'bg-danger': !car.available,
                                 'bg-success': car.available
                             }">Disponibile</span>
@@ -24,7 +25,7 @@
                     </div>
                 </div>
                 
-                <div class="col-6">
+                <div class="col-12 col-md-6">
                     <h4>Le Marmotte</h4>
                     <p>Marmota Blumenbach, 1779 è il genere dell'ordine dei Roditori (Rodentia) cui appartengono
                         le quindici specie di marmotte, scoiattoli di terra (Marmotini) lunghi fino a 50 centimetri 

@@ -1,10 +1,10 @@
 <main>
 
     <section>
-        <div class="container col-xxl-8 px-4">
+        <div class="container col-xxl-8 px-4 ">
             <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
                 <div class="col-10 col-sm-8 col-lg-6">
-                    <img src="../assets/img/AUTODEAL.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes"
+                    <img src="../assets/img/AUTODEAL.png" class="d-block mx-lg-auto img-fluid" alt="immagine-figa"
                         width="700" height="500" loading="lazy">
                 </div>
                 <div class="col-lg-6">
@@ -21,24 +21,44 @@
     </section>
 
     <section>
+        <div class="text-center">
+            <p class="display-4">I nostri partner</p>
+            <div class="d-flex flex-row justify-content-center gap-3 my-5">
+                <div *ngFor="let car of cars">
+                    <!-- Scusa Mike, avevo fatto diversamente, avevo inserito un altra section che ho commentato sotto.
+                    Me ne sono reso conto troppo tardi per fare una funzione adatta.-->
+                    <div *ngIf="car.available">
+                        <img [src]="car.brandLogo" class="logo-main" alt="car.brand">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <section>
         <article>
             <div class="container">
                 <div class="border-top border-bottom border-2 border-dark my-3">
                     <p class="display-6 border-bottom border-2 border-dark">In evidenza</p>
                     <div class="row my-2">
-                        <div class="col-6" *ngFor="let car of cars.splice(0,2)">
+                        <div class="col-12 col-md-6" *ngFor="let car of cars.splice(0,2)">
                             <div class="card my-2 text-center ">
                                 <div class="">
-                                    <img src="{{car.brandLogo}}" class="mt-2" width="120px" height="100px" alt="...">
+                                    <img src="{{car.brandLogo}}" class="mt-2 logo-main"  alt="...">
                                 </div>
                                 <div class="">
-                                    <img src="{{car.modelImage}}" class="card-img-top mt-3  " height="300px" alt="...">
+                                    <img src="{{car.modelImage}}" class="card-img-top mt-3 car-main-home" alt="...">
                                 </div>
                                     <div class="card-body position-relative" >
-                                        <span class="badge text-bg-secondary position-absolute bottom-10 end-0" [ngClass]="{
-                                            'bg-danger': !car.available,
+                                        <span class="badge text-bg-secondary position-absolute bottom-10 end-0" *ngIf="car.available" [ngClass]="{
+                                            
                                             'bg-success': car.available
                                         }">Disponibile</span>
+                                        <span class="badge text-bg-secondary position-absolute bottom-10 end-0" *ngIf="!car.available" [ngClass]="{
+                                            'bg-danger': !car.available,
+                                            
+                                        }">Non Disponibile</span>
                                         <h5 class="card-title">Brand: {{car.brand}} </h5>
                                         <h6 class="card-text ">Modello: {{car.model}}</h6>
                                         <p class="">Prezzo: {{car.price}}$</p>
@@ -56,15 +76,19 @@
         </article>
     </section>
 
+
+
+<!-- 
+
     <section>
         <div class="container">
             <div>
                 <p class="">Le nostre Automobili</p>
+
                 <div class="row my-2">
-                    <div class="col-3" *ngFor="let car of cars.slice(0,4);">
+                    <div class="col-12 col-md-6 col-lg-3" *ngFor="let car of cars.slice(0,4);">
                         <div class="card my-2  ">
-                            <img src="{{car.modelImage}}" class="card-img-top" height="200px"
-                                alt="...">
+                            <img src="{{car.modelImage}}" class="card-img-top img-fluid" height="200px" alt="...">
                             <div class="card-body position-relative" >
                                 <span class="badge text-bg-secondary position-absolute bottom-10 end-0" [ngClass]="{
                                     'bg-danger': !car.available,
@@ -83,6 +107,6 @@
             </div>
         </div>
     </section>
-
+-->
 
 </main>

@@ -10,7 +10,7 @@ import { CarService } from '../../car.service';
 export class HomeComponent {
 
   cars:iCar[] = [];
-
+  logo: string[] = [];
 constructor(private allCars:CarService){}
 
 ngOnInit(){
@@ -34,4 +34,7 @@ shuffle(array: any[]): any[] {
 
   return array;
 }
+
+
+
 }

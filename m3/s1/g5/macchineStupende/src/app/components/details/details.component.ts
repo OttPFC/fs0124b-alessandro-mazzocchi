@@ -21,9 +21,7 @@ export class DetailsComponent implements OnInit {
         if (res) {
           this.cars = [res];
           console.log(this.cars);
-        } else {
-          console.log('Auto non trovata');
-        }
+        } 
       });
     });
   }
