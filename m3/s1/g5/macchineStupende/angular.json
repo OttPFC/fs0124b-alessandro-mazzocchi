@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "epicblog": {
+    "macchineStupende": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -24,7 +24,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/epicblog",
+            "outputPath": "dist/macchine-stupende",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -72,10 +72,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "epicblog:build:production"
+              "buildTarget": "macchineStupende:build:production"
             },
             "development": {
-              "buildTarget": "epicblog:build:development"
+              "buildTarget": "macchineStupende:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -83,7 +83,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "epicblog:build"
+            "buildTarget": "macchineStupende:build"
           }
         },
         "test": {

@@ -12,10 +12,6 @@ export class PostDetailsComponent {
 
   ngOnInit() {
 
-    fetch('../assets/db.json')
-      .then(art => art.json())
-      .then(data => {
-        this.postArticles2 = data.posts.filter((art => art.id))
-      })
+    
   }
 }

@@ -1,0 +1,54 @@
+<main>
+    <section>
+        <article>
+            <div class="container">
+                <div class="border-top border-bottom border-2 border-dark my-3">
+                    <p class="display-6 border-bottom border-2 border-dark">In evidenza</p>
+                    <div class="row my-2">
+                        <div class="col-12">
+                            <div class="card my-2 text-center">
+                                <div class="w-25 mx-auto ">
+                                    <img src="{{cars[0].brandLogo}}" class="rounded-5" alt="...">
+                                </div>
+                                <div class="w-25 mx-auto ">
+                                    <img src="{{cars[0].modelImage}}" class="card-img-top mt-3  " height="300px" alt="...">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">{{cars[0].brand}}</h5>
+                                    <a href="#" class="">{{cars[0].year}}</a>
+                                    <p class="card-text">{{cars[0].price}}</p>
+                                    <a id="{{cars[0].brand}}" href=""><button class="btn btn-primary">Vai all'articolo</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <section>
+        <div class="container">
+            <div>
+                <p class="">Le nostre Automobili</p>
+
+                <div class="row my-2">
+                    <div class="col-3" *ngFor="let car of cars.slice(0,4);">
+                        <div class="card my-2  ">
+                            <img src="https://picsum.photos/200/300?grayscale" class="card-img-top" height="300px" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Brand: {{car.brand}}</h5>
+                                <h6 class="card-text ">Modello: {{car.model}}</h6>
+                                <p  class="">Prezzo: {{car.price}}</p>
+                                <p class="card-text ">Anno: {{car.year}}</p>
+                                <a id="" href=""><button class="btn btn-primary">Vai all'articolo</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+</main>
