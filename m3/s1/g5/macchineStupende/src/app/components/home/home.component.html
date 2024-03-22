@@ -3,17 +3,29 @@
     <section>
         <div class="container col-xxl-8 px-4 ">
             <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-                <div class="col-10 col-sm-8 col-lg-6">
+                <div class="col-10 col-sm-8 col-lg-6 d-none d-md-block">
                     <img src="../assets/img/AUTODEAL.png" class="d-block mx-lg-auto img-fluid" alt="immagine-figa"
                         width="700" height="500" loading="lazy">
                 </div>
-                <div class="col-lg-6">
+                <div class="col-10 col-sm-8 col-lg-6 d-md-none">
+                    <img src="../assets/img/jesus_Franz_2.jpg" class="d-block mx-lg-auto img-fluid" alt="immagine-figa"
+                        width="700" height="500" loading="lazy">
+                </div>
+                <div class="col-lg-6 d-none d-md-block">
                     <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">La concessionaria che ti porta a guidare verso i tuoi sogni.
                     </h1>
                     <p class="lead">E' risaputo che un auto non è semplicemenete un auto.
                         eì possibile viaggire standop fermi, ma viggiare spostandosi non è meglio ?
                         Siamo a completa disposizione per illustrarti i sogni che abbiamo da offrirti.
                         Vieni a visitarci nella nostra filiale di <span class="fw-bold">Campo a Buggione.</span>
+                    </p>
+                </div>
+                <div class="col-lg-6 d-md-none">
+                    <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Il caffe sarà la salvezza dei tuoi programmatori.
+                    </h1>
+                    <p class="lead">Santo Franz da Tor Pignattara, bevve caffè e vide lo futuro.
+                        Non c'è scampo per timorati di JavaScript, TypeScript ed Angular.
+                        <span class="fw-bold">Beviamo.</span>
                     </p>
                 </div>
             </div>
@@ -23,11 +35,11 @@
     <section>
         <div class="text-center">
             <p class="display-4">I nostri partner</p>
-            <div class="d-flex flex-row justify-content-center gap-3 my-5">
-                <div *ngFor="let car of cars">
+            <div class="row">
+                <div  *ngFor="let car of cars">
                     <!-- Scusa Mike, avevo fatto diversamente, avevo inserito un altra section che ho commentato sotto.
                     Me ne sono reso conto troppo tardi per fare una funzione adatta.-->
-                    <div *ngIf="car.available">
+                    <div  *ngIf="car.available">
                         <img [src]="car.brandLogo" class="logo-main" alt="car.brand">
                     </div>
                 </div>
@@ -43,8 +55,8 @@
                     <p class="display-6 border-bottom border-2 border-dark">In evidenza</p>
                     <div class="row my-2">
                         <div class="col-12 col-md-6" *ngFor="let car of cars.splice(0,2)">
-                            <div class="card my-2 text-center ">
-                                <div class="">
+                            <div class="card my-2 text-md-center  ">
+                                <div class="text-center">
                                     <img src="{{car.brandLogo}}" class="mt-2 logo-main"  alt="...">
                                 </div>
                                 <div class="">

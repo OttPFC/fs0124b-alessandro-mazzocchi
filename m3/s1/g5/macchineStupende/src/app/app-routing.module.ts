@@ -5,9 +5,13 @@ import { AudiComponent } from './components/audi/audi.component';
 import { FordComponent } from './components/ford/ford.component';
 import { FiatComponent } from './components/fiat/fiat.component';
 import { DetailsComponent } from './components/details/details.component';
+import { LoginComponent } from './components/login/login.component';
 
 const routes: Routes = [
   { path: '',
+component: LoginComponent
+},
+  { path: 'home',
 component: HomeComponent
 },
 { path: 'audi',

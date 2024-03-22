@@ -1,0 +1,8 @@
+.ford-logo{
+    height: 50px;
+    margin-top: 20px;
+    @media screen and (min-width: 769px) {
+        height: 100px;
+        margin-top: 0px;
+    }
+}
