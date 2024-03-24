@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { iCar } from '../../Models/car';
 import { CarService } from '../../car.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -10,7 +11,7 @@ import { CarService } from '../../car.service';
 export class NavbarComponent {
   cars:iCar[] = [];
 
-  constructor(private allCars:CarService){}
+  constructor(private allCars:CarService,private router: Router){}
   
   ngOnInit(){
   
@@ -21,5 +22,8 @@ export class NavbarComponent {
     
     });
   
+  }
+  isHomePage(): boolean {
+    return this.router.url === '/';
   }
 }

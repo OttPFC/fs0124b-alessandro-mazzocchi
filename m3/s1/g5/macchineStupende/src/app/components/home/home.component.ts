@@ -11,6 +11,7 @@ export class HomeComponent {
 
   cars:iCar[] = [];
   logo: string[] = [];
+
 constructor(private allCars:CarService){}
 
 ngOnInit(){
@@ -21,6 +22,8 @@ ngOnInit(){
     console.log(this.cars)
   
   });
+
+  
 
 }
 shuffle(array: any[]): any[] {
@@ -34,6 +37,7 @@ shuffle(array: any[]): any[] {
 
   return array;
 }
+
 
 
 

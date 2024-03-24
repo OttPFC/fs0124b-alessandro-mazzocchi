@@ -22,7 +22,7 @@
                             }">Non Disponibile</span>
                             <h5 class="card-title">Brand: {{car.brand}}</h5>
                             <h6 class="card-text ">Modello: {{car.model}}</h6>
-                            <p class="">Prezzo: {{car.price}}$</p>
+                            <p class="">Prezzo: {{car.price | currency : "EUR"}}</p>
                             <p class="card-text ">Anno: {{car.year}}</p>
                             <a id="" [routerLink]="['/details', car.model]"><button class="btn btn-primary">Vai
                                     all'articolo</button></a>
