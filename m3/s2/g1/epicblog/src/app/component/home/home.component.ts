@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { iPost } from '../Model/post';
 import { PostServiceService } from '../../post-service.service';
 
@@ -12,9 +12,10 @@ export class HomeComponent implements OnInit {
 
   db:iPost[] = [];
   dbShuffle:iPost[] = [];
+
   constructor(private newDb:PostServiceService) {}
   ngOnInit(): void {
-
+  
     
 
       this.getUnshuffleDb()
@@ -42,6 +43,12 @@ export class HomeComponent implements OnInit {
     }
 
     return array;
+  }
+
+  @Input() post!: iPost
+  edit: Boolean = false
+  toggleEdit() {
+    this.edit = !this.edit
   }
 }
 

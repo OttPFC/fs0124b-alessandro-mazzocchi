@@ -13,17 +13,18 @@ export class ActivePostComponent {
   db:iPost[] = [];
   
   constructor(private router: Router,private newDb:PostServiceService) {}
-  
 
   ngOnInit() {
     this.getUnshuffleDb();
-    this.db.filter((art: { active: boolean; }) => art.active)
+    
+  }
   
-    }
-
-    getUnshuffleDb() {
-      this.db = this.newDb.getDb()
-        console.log(this.db)
+  getUnshuffleDb() {
+    this.db = this.newDb.getDb()
+    console.log(this.db)
+    const dbArt =  this.db.filter((art: { active: boolean; }) => art.active)
+    console.log(dbArt)
+    this.db = dbArt
     }
   goToPostDetails(id: number) {
     this.db = this.newDb.getDb()

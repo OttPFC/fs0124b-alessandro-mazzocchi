@@ -17,6 +17,7 @@ export class PostServiceService {
         "userId": 9,
         "tags": ["history", "american", "crime"],
         "active": true
+        
       },
       {
         "id": 2,
