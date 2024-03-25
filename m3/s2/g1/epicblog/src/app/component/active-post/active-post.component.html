@@ -1,0 +1,20 @@
+<section>
+    <div class="container">
+        <div>
+            <p>Potrebbero interessarti anche </p>
+            <div class="row ">
+                <div class="col-3 " *ngFor="let data of db" >
+                    <div class="card h-100 overflow-auto">
+                        <img src="https://picsum.photos/200/300?grayscale" class="card-img-top" height="300px" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">{{data.title}}</h5>
+                            <a href="#" class="">{{data.tags}}</a>
+                            <p class="card-text ">{{data.body}}</p>
+                            <a id="{{data.id}}" href=""><button class="btn btn-primary">Vai all'articolo</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
