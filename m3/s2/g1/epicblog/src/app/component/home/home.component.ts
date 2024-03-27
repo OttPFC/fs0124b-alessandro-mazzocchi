@@ -44,6 +44,10 @@ export class HomeComponent implements OnInit {
 
     return array;
   }
+  saveData(id: number) {
+    
+    this.dbShuffle.find(data => data.id === id);
+  }
 
   @Input() post!: iPost
   edit: Boolean = false
