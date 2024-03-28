@@ -31,6 +31,8 @@ export class ServiceProductsService {
     return this.http.delete<iProducts>(`${this.apiUrl}/${id}`)
   }
 
+  
+
 
 
 }

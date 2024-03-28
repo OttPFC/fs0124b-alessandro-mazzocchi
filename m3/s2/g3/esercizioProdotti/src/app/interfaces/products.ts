@@ -6,6 +6,7 @@ export interface iRoot {
 }
 
 export interface iProducts {
+    [x: string]: any
     id?: number
     title?: string
     description?: string
