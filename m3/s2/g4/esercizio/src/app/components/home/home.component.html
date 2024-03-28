@@ -18,6 +18,7 @@
 </div>
 
 <div class="container">
+    <span>Foto che ti piacciono: {{likePhotos.length}}</span>
     <div class="row" >
         <div class="col-3 my-3" *ngFor="let p of photos.splice(0,2)">
             <div id="{{p.id}}" class="card h-100" >

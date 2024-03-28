@@ -21,6 +21,7 @@ export class FotoService {
       this.favourites = [...this.favourites, ...p];
     })
   );
+  
 
   constructor(private http: HttpClient) {
     this.getAllPhotos().subscribe(data => {
@@ -41,9 +42,10 @@ export class FotoService {
     }));
   }
 
-  addToFavourites(photo: iPhotos){
-    const updatedFavourites = [...this.favourites, photo];
-    this.favSubject.next(updatedFavourites);
+  addToFavourites(photo:iPhotos){
+    this.favourites.push(photo);
+    this.favSubject.next(this.favourites);
+    
   }
 
   

@@ -10,6 +10,7 @@ import { FotoService } from '../../Model/foto.service';
 export class HomeComponent {
 
   photos:iPhotos[] = [];
+  likePhotos: iPhotos[] = [];
   constructor(private photoSvr:FotoService) {}
 
 
@@ -18,16 +19,27 @@ export class HomeComponent {
       this.photos = photos;
       console.log(this.photos);
     });
+    this.likeAtThis()
   }
 
   deletePhoto(id:number) {
     this.photoSvr.deletePhoto(id).subscribe();
+    
   }
 
   addFavourites(product:iPhotos) {
     this.photoSvr.addToFavourites(product)
+    
   }
 
-
+  likeAtThis(){
+    this.photoSvr.$favourites.subscribe(photos => {
+        this.likePhotos = photos;  
+        console.log(this.likePhotos);
+        console.log('Mi Piace'); 
+        
+      }
+    );
+  }
 
 }
