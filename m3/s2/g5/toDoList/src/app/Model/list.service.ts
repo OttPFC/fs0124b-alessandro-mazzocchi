@@ -931,12 +931,15 @@ getAllUsers(){
     console.log(this.users);
   })
 }
-getAllUsersId(){
+getAllUsersId(): number[] {
   this.usersService.getAllUsers().subscribe(users => {
     this.users = users;
     console.log(this.users);
-  })
+  });
+  
+  return this.users.map(user => user.id);
 }
+
 
 
 getCompletedTask(){
