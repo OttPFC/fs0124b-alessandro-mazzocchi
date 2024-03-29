@@ -41,12 +41,12 @@ export class FotoService {
       this.photoSubject.next(this.photos);
     }));
   }
-
+  
   addToFavourites(photo:iPhotos){
     this.favourites.push(photo);
-    this.favSubject.next(this.favourites);
+    this.favSubject.next(this.favourites)
     
   }
-
+  
   
 }
