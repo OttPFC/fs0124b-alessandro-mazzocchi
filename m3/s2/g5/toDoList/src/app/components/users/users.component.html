@@ -1,1 +1,25 @@
-<p>users works!</p>
+<div class="container">
+    <div class="list-group">
+        <div class="d-flex" *ngFor="let t of task">
+            <div class="mr-3">
+                <img [src]="getUserImage(t.userId)" height="100px" alt="">
+            </div>
+            <div>
+                <a class="list-group-item list-group-item-action todo" 
+                [ngClass]="{
+                    'bg-success': t.completed,
+                    'bg-danger': !t.completed
+                }">
+                    <div class="d-flex flex-column w-100 justify-content-between">
+                        <div class="d-flex justify-content-between">
+                            <h5 class="mb-1">Task</h5>
+                            
+                        </div>
+                        <small class="text-body-secondary mt-2">{{t.todo}}</small>
+                    </div>
+                    <p class="mb-1 mt-2">{{ getUserName(t.userId) }} - {{getUserTitle(t.userId)}}</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

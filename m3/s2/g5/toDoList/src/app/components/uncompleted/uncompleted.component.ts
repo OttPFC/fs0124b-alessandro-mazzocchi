@@ -5,13 +5,12 @@ import { ListService } from '../../Model/list.service';
 import { UsersService } from '../../Model/users.service';
 
 @Component({
-  selector: 'app-completed',
-  templateUrl: './completed.component.html',
-  styleUrl: './completed.component.scss'
+  selector: 'app-uncompleted',
+  templateUrl: './uncompleted.component.html',
+  styleUrl: './uncompleted.component.scss'
 })
-export class CompletedComponent {
-
-
+export class UncompletedComponent {
+  
   task:iTask[]= [];
   users:iUsers[]= [];
 
@@ -41,7 +40,7 @@ allUsers(){
 }
 
 completedTask(){
-  this.taskService.getCompletedTask().subscribe(task => {
+  this.taskService.getUncompletedTask().subscribe(task => {
     this.task = task;
   })
 }
@@ -60,6 +59,5 @@ getUserTitle(userId: number): string {
   const user = this.users.find(u => u.id === userId);
   return user ? `${user.title}` : '';
 }
-
 
 }

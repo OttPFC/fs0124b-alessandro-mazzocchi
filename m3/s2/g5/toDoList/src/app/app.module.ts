@@ -7,7 +7,8 @@ import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './main-components/navbar/navbar.component';
 import { CompletedComponent } from './components/completed/completed.component';
 import { UsersComponent } from './components/users/users.component';
-import { TodoComponent } from './components/todo/todo.component';
+
+import { UncompletedComponent } from './components/uncompleted/uncompleted.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,7 @@ import { TodoComponent } from './components/todo/todo.component';
     NavbarComponent,
     CompletedComponent,
     UsersComponent,
-    TodoComponent
+    UncompletedComponent
   ],
   imports: [
     BrowserModule,

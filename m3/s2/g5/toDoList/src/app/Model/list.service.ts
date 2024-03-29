@@ -1,6 +1,9 @@
 import { Injectable } from '@angular/core';
 import { iTask } from '../interfaces/task';
 import { BehaviorSubject } from 'rxjs/internal/BehaviorSubject';
+import { map } from 'rxjs/internal/operators/map';
+import { UsersService } from './users.service';
+import { iUsers } from '../interfaces/users';
 
 @Injectable({
   providedIn: 'root'
@@ -909,21 +912,39 @@ private taskList:iTask[] = [
     "userId":32
   }
 ];
-
+users:iUsers[]= [];
 
 
 
 taskSubject = new BehaviorSubject<iTask[]>(this.taskList)
 $task = this.taskSubject.asObservable();
 
-  constructor() { }
+  constructor(private usersService:UsersService) { }
 
 getAllTask(){
   return this.$task;
-  
-  
 }
 
+getAllUsers(){
+  this.usersService.getAllUsers().subscribe(users => {
+    this.users = users;
+    console.log(this.users);
+  })
+}
+
+
+
+getCompletedTask(){
+  return this.$task.pipe(
+    map(tasks => tasks.filter(task => task.completed))
+  );
+}
+
+getUncompletedTask(){
+  return this.$task.pipe(
+    map(tasks => tasks.filter(task => !task.completed))
+  );
+}
 
 
 }

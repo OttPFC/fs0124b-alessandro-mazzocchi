@@ -11,12 +11,13 @@
                     'bg-danger': !t.completed
                 }">
                     <div class="d-flex flex-column w-100 justify-content-between">
-                        <h5 class="mb-1">Task</h5>
+                        <div class="d-flex justify-content-between">
+                            <h5 class="mb-1">Task</h5>
+                            <input type="checkbox" [checked]="t.completed" (change)="toggleTaskStatus(t)" class="custom-checkbox">
+                        </div>
                         <small class="text-body-secondary mt-2">{{t.todo}}</small>
                     </div>
                     <p class="mb-1 mt-2">{{ getUserName(t.userId) }} - {{getUserTitle(t.userId)}}</p>
-                    
-                    <input type="checkbox" [checked]="t.completed" (change)="toggleTaskStatus(t)">
                 </a>
             </div>
         </div>
