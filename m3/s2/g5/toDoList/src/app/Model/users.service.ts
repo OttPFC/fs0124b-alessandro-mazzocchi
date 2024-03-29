@@ -820,9 +820,22 @@ export class UsersService {
     return this.$users;
   }
 
-  getUsersTasks(){
-    
+  getUserImage(userId: number): string {
+    const user = this.usersList.find(u => u.id === userId);
+    return user ? user.image : '';
   }
+
+  getUserName(userId: number): string {
+    const user = this.usersList.find(u => u.id === userId);
+    return user ? `${user.firstName} ${user.lastName}` : '';
+  }
+
+  getUserTitle(userId: number): string {
+    const user = this.usersList.find(u => u.id === userId);
+    return user ? `${user.title}` : '';
+  }
+
+  
 
 
 

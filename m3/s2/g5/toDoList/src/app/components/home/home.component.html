@@ -1,6 +1,14 @@
 <div class="container">
+    
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Cerca task per nome utente" [(ngModel)]="search" (input)="onSearchChange($event)">
+        <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button" (click)="searchTasks()">Cerca</button>
+        </div>
+    </div>
+
     <div class="list-group">
-        <div class="d-flex" *ngFor="let t of task">
+        <div class="d-flex" *ngFor="let t of filteredTasks">
             <div class="mr-3">
                 <img [src]="getUserImage(t.userId)" height="100px" alt="">
             </div>

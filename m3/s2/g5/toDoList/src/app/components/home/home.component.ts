@@ -9,11 +9,14 @@ import { UsersService } from '../../Model/users.service';
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
+
 export class HomeComponent {
 
 
   task:iTask[]= [];
   users:iUsers[]= [];
+  search: string = '';
+  filteredTasks: any[] = [];
 
   constructor(
     private taskService: ListService, 
@@ -23,33 +26,39 @@ export class HomeComponent {
 ngOnInit() {
   this.taskService.getAllTask().subscribe(task => {
     this.task = task;
-    console.log(this.task);
-    
+    this.filteredTasks = [...this.task];
   })
   this.usersService.getAllUsers().subscribe(users => {
-    this.users = users;
-    console.log(this.users);
-    
+    this.users = users;    
   })
 
 }
 
 getUserImage(userId: number): string {
-  const user = this.users.find(u => u.id === userId);
-  return user ? user.image : '';
+  return this.usersService.getUserImage(userId);
 }
 
 getUserName(userId: number): string {
-  const user = this.users.find(u => u.id === userId);
-  return user ? `${user.firstName} ${user.lastName}` : '';
+  return this.usersService.getUserName(userId);
 }
 
 getUserTitle(userId: number): string {
-  const user = this.users.find(u => u.id === userId);
-  return user ? `${user.title}` : '';
+  return this.usersService.getUserTitle(userId);
 }
-toggleTaskStatus(task: any): void {
+toggleTaskStatus(task: any){
   task.completed = !task.completed;
+}
+
+onSearchChange(event:any){
+  this.search = event.target.value;
+  this.searchTasks();
+}
+
+searchTasks(){
+  this.filteredTasks = this.task.filter(t => {
+    const user = this.users.find(u => u.id === t.userId);
+    return user && `${user.firstName} ${user.lastName}`.toLowerCase().includes(this.search.toLowerCase());
+  });
 }
 
 }

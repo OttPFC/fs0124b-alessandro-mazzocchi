@@ -4,22 +4,27 @@
             <div class="mr-3">
                 <img [src]="getUserImage(t.userId)" height="100px" alt="">
             </div>
-            <div>
-                <a class="list-group-item list-group-item-action todo" 
-                [ngClass]="{
-                    'bg-success': t.completed,
-                    'bg-danger': !t.completed
-                }">
-                    <div class="d-flex flex-column w-100 justify-content-between">
-                        <div class="d-flex justify-content-between">
-                            <h5 class="mb-1">Task</h5>
-                            
+            <div class="p-3">
+                <div>
+                    <a getTasksByUserId class="list-group-item list-group-item-action todo" 
+                    [ngClass]="{
+                        'bg-success': t.completed,
+                        'bg-danger': !t.completed
+                    }">
+                        <div class="d-flex flex-column w-100 justify-content-between">
+                            <div class="d-flex justify-content-between" >
+                                <p class="mb-1 mt-2">{{ getUserName(t.userId) }} - {{getUserTitle(t.userId)}}</p>
+                                <input type="checkbox" [checked]="t.completed" (change)="toggleTaskStatus(t)" class="custom-checkbox">
+                            </div>
+                            <div *ngFor="let d of taskByUser" class="border border-dark p-1 my-1 ">
+                                <small class="text-body-secondary">{{d.todo}}</small>
+                            </div>
                         </div>
-                        <small class="text-body-secondary mt-2">{{t.todo}}</small>
-                    </div>
-                    <p class="mb-1 mt-2">{{ getUserName(t.userId) }} - {{getUserTitle(t.userId)}}</p>
-                </a>
+                        
+                    </a>
+                </div>
             </div>
+            
         </div>
     </div>
 </div>

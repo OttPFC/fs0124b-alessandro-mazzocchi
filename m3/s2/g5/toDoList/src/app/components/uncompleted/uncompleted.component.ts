@@ -46,18 +46,15 @@ completedTask(){
 }
 
 getUserImage(userId: number): string {
-  const user = this.users.find(u => u.id === userId);
-  return user ? user.image : '';
+  return this.usersService.getUserImage(userId);
 }
 
 getUserName(userId: number): string {
-  const user = this.users.find(u => u.id === userId);
-  return user ? `${user.firstName} ${user.lastName}` : '';
+  return this.usersService.getUserName(userId);
 }
 
 getUserTitle(userId: number): string {
-  const user = this.users.find(u => u.id === userId);
-  return user ? `${user.title}` : '';
+  return this.usersService.getUserTitle(userId);
 }
 
 }

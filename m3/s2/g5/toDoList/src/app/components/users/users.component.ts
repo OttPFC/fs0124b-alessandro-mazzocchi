@@ -13,7 +13,7 @@ export class UsersComponent {
 
   task:iTask[]= [];
   users:iUsers[]= [];
-
+  taskByUser:iTask []=[]
   constructor(
     private taskService: ListService, 
     private usersService:UsersService
@@ -22,32 +22,38 @@ export class UsersComponent {
 ngOnInit() {
   this.taskService.getAllTask().subscribe(task => {
     this.task = task;
-    console.log(this.task);
     
   })
   this.usersService.getAllUsers().subscribe(users => {
     this.users = users;
-    console.log(this.users);
-    
   })
-
 }
 
 getUserImage(userId: number): string {
-  const user = this.users.find(u => u.id === userId);
-  return user ? user.image : '';
+  return this.usersService.getUserImage(userId);
 }
 
 getUserName(userId: number): string {
-  const user = this.users.find(u => u.id === userId);
-  return user ? `${user.firstName} ${user.lastName}` : '';
+  return this.usersService.getUserName(userId);
 }
 
 getUserTitle(userId: number): string {
-  const user = this.users.find(u => u.id === userId);
-  return user ? `${user.title}` : '';
+  return this.usersService.getUserTitle(userId);
 }
-toggleTaskStatus(task: any): void {
+
+toggleTaskStatus(task: any){
   task.completed = !task.completed;
 }
+
+getTasksByUserId(userId: number){
+  this.taskService.getTasksByUserId(userId).subscribe(
+    data => {
+      this.taskByUser = data;
+      console.log(this.taskByUser);
+      
+    }
+  );
+}
+
+
 }

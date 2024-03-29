@@ -9,6 +9,7 @@ import { CompletedComponent } from './components/completed/completed.component';
 import { UsersComponent } from './components/users/users.component';
 
 import { UncompletedComponent } from './components/uncompleted/uncompleted.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { UncompletedComponent } from './components/uncompleted/uncompleted.compo
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

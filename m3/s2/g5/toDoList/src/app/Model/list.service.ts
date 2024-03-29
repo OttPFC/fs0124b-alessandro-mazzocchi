@@ -931,7 +931,12 @@ getAllUsers(){
     console.log(this.users);
   })
 }
-
+getAllUsersId(){
+  this.usersService.getAllUsers().subscribe(users => {
+    this.users = users;
+    console.log(this.users);
+  })
+}
 
 
 getCompletedTask(){
@@ -946,5 +951,9 @@ getUncompletedTask(){
   );
 }
 
-
+getTasksByUserId(userId: number){
+  return this.$task.pipe(
+    map(tasks => tasks.filter(task => task.userId === userId))
+  );
+}
 }
