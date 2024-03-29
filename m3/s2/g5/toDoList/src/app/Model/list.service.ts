@@ -940,8 +940,6 @@ getAllUsersId(): number[] {
   return this.users.map(user => user.id);
 }
 
-
-
 getCompletedTask(){
   return this.$task.pipe(
     map(tasks => tasks.filter(task => task.completed))
