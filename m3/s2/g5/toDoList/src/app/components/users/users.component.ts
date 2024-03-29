@@ -14,6 +14,7 @@ export class UsersComponent {
   task:iTask[]= [];
   users:iUsers[]= [];
   taskByUser:iTask []=[]
+
   constructor(
     private taskService: ListService, 
     private usersService:UsersService
@@ -27,6 +28,7 @@ ngOnInit() {
   this.usersService.getAllUsers().subscribe(users => {
     this.users = users;
   })
+  this.getTasksByUserId(45)
 }
 
 getUserImage(userId: number): string {

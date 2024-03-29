@@ -49,10 +49,7 @@ toggleTaskStatus(task: any){
   task.completed = !task.completed;
 }
 
-onSearchChange(event:any){
-  this.search = event.target.value;
-  this.searchTasks();
-}
+
 
 searchTasks(){
   this.filteredTasks = this.task.filter(t => {

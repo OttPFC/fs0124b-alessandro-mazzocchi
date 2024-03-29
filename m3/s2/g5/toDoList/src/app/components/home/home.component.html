@@ -1,33 +1,41 @@
 <div class="container">
-    
-    <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="Cerca task per nome utente" [(ngModel)]="search" (input)="onSearchChange($event)">
-        <div class="input-group-append">
-            <button class="btn btn-outline-secondary" type="button" (click)="searchTasks()">Cerca</button>
-        </div>
-    </div>
+    <div class="d-flex justify-content-end ">
 
-    <div class="list-group">
-        <div class="d-flex" *ngFor="let t of filteredTasks">
-            <div class="mr-3">
-                <img [src]="getUserImage(t.userId)" height="100px" alt="">
-            </div>
-            <div>
-                <a href="#" class="list-group-item list-group-item-action todo" 
-                [ngClass]="{
-                    'bg-success': t.completed,
-                    'bg-danger': !t.completed
-                }">
-                    <div class="d-flex flex-column w-100 justify-content-between">
-                        <div class="d-flex justify-content-between">
-                            <h5 class="mb-1">Task</h5>
-                            <input type="checkbox" [checked]="t.completed" (change)="toggleTaskStatus(t)" class="custom-checkbox">
-                        </div>
-                        <small class="text-body-secondary mt-2">{{t.todo}}</small>
-                    </div>
-                    <p class="mb-1 mt-2">{{ getUserName(t.userId) }} - {{getUserTitle(t.userId)}}</p>
-                </a>
+        <div class="input-group mb-3 w-25">
+            <input type="text" class="form-control" placeholder="Cerca " [(ngModel)]="search" >
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button" (click)="searchTasks()">Cerca</button>
             </div>
         </div>
     </div>
+    
+        <div class="list-group">
+            <div class="d-flex " *ngFor="let t of filteredTasks">
+                <div class="mr-3">
+                    <img [src]="getUserImage(t.userId)" height="100px" alt="">
+                </div>
+                <div>
+                    <a  class="list-group-item list-group-item-action todo" 
+                    >
+                        <div class="d-flex flex-column w-100 justify-content-between">
+                            <div class="d-flex justify-content-between px-3"
+                            [ngClass]="{
+                                'bg-done': t.completed,
+                                'bg-not': !t.completed
+                            }">
+                                <h5 class="mb-1">Task</h5>
+                                <input type="checkbox" [checked]="t.completed" (change)="toggleTaskStatus(t)" class="custom-checkbox">
+                            </div>
+                            <small class="text-body-secondary mt-2"
+                            [ngClass]="{
+                                'done': t.completed,
+                                '': !t.completed
+                            }"
+                            >{{t.todo}}</small>
+                        </div>
+                        <p class="mb-1 mt-2">{{ getUserName(t.userId) }} - {{getUserTitle(t.userId)}}</p>
+                    </a>
+                </div>
+            </div>
+        </div>
 </div>
