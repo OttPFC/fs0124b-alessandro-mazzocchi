@@ -1,0 +1,14 @@
+<div class="text-center" >
+    <span class="animated display-5" 
+    [ngClass]="{'show': isImageVisible, 'hide': !isImageVisible}">
+    Ascolta l'ultima hit del momento!
+</span>
+<div class="mt-5">
+    <audio controls 
+    source src="assets/audio/sigla.wav" type="audio/wav">
+</audio>
+</div>
+</div>
+
+
+

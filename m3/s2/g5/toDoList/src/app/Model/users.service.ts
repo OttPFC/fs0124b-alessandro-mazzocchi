@@ -814,7 +814,7 @@ export class UsersService {
   usersSubject = new BehaviorSubject<iUsers[]>(this.usersList)
   $users = this.usersSubject.asObservable();
 
-  constructor() { }
+  constructor(){}
 
   getUserImage(userId: number): string {
     const user = this.usersList.find(u => u.id === userId);
@@ -830,4 +830,5 @@ export class UsersService {
     const user = this.usersList.find(u => u.id === userId);
     return user ? `${user.title}` : '';
   }
+
 }

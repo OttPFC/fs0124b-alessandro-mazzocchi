@@ -6,22 +6,25 @@
             </div>
             <div class="p-3">
                 <div>
-                    <a getTasksByUserId class="list-group-item list-group-item-action todo">
+                    <div id="{{getTasksByUserId(t.userId)}}" class="list-group-item todo" >
                         <div class="d-flex flex-column w-100 justify-content-between">
-                            <div class="d-flex justify-content-between" >
+                            <div class="d-flex justify-content-between"  >
                                 <p class="mb-1 mt-2">{{ getUserName(t.userId) }} - {{getUserTitle(t.userId)}}</p>
-                                <input type="checkbox" [checked]="t.completed" (change)="toggleTaskStatus(t)" class="custom-checkbox">
                             </div>
-                            <div *ngFor="let d of taskByUser" class="border border-dark p-1 my-1 " 
+                            <div  *ngFor="let d of taskByUser" class=" d-flex justify-content-between border border-dark p-1 my-1 " 
                             [ngClass]="{
-                                'bg-success': t.completed,
-                                'bg-danger': !t.completed
-                            }">
+                                'bg-done': d.completed,
+                                'bg-not': !d.completed
+                            }"> 
                                 <small class="text-body-secondary">{{d.todo}}</small>
+                                <div>
+
+                                    <input type="checkbox" [checked]="d.completed" (change)="taskStatus(d)" class="custom-checkbox">
+                                </div>
                             </div>
                         </div>
                         
-                    </a>
+                    </div>
                 </div>
             </div>
             

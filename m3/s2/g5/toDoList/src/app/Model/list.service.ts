@@ -916,7 +916,7 @@ private taskList:iTask[] = [
 taskSubject = new BehaviorSubject<iTask[]>(this.taskList)
 $task = this.taskSubject.asObservable();
 
-  constructor(private usersService:UsersService) { }
+  constructor(){}
 
 getCompletedTask(){
   return this.$task.pipe(

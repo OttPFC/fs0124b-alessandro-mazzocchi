@@ -12,7 +12,7 @@ import { UsersService } from '../../Model/users.service';
 export class UsersComponent {
 
   task:iTask[]= [];
-  users:iUsers[]= [];
+  
   taskByUser:iTask []=[]
 
   constructor(
@@ -24,10 +24,6 @@ ngOnInit() {
   this.taskService.$task.subscribe(task => {
     this.task = task;
   })
-  this.usersService.$users.subscribe(users => {
-    this.users = users;
-  })
-  this.getTasksByUserId(45)
 }
 
 getUserImage(userId: number): string {
@@ -42,7 +38,7 @@ getUserTitle(userId: number): string {
   return this.usersService.getUserTitle(userId);
 }
 
-toggleTaskStatus(task: any){
+taskStatus(task: any){
   task.completed = !task.completed;
 }
 

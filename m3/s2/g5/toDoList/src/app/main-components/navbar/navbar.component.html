@@ -1,13 +1,17 @@
-<div class="container">
+<div class="container ">
     <div class="d-flex flex-column text-center gap-3 my-3">
-        <div>
-            <span class="display-5 fw-bold">Che manzione avrai oggi?</span>
+        <div class="d-flex flex-column">
+            <span class="display-5 fw-bold">Choose your destiny</span>
+            <span>today, tomorrow, toDoList</span>
         </div>
         <div class="d-flex gap-3 justify-content-center">
-            <button routerLink="/completed" class="btn btn-primary btn-sm">Completati</button>
-            <button routerLink="/uncompleted" class="btn btn-primary btn-sm">Da completare</button>
-            <button routerLink="/users" class="btn btn-primary btn-sm">Utenti</button>
-            <button routerLink="/" class="btn btn-primary btn-sm">Tutti</button>
+            <button routerLink="/aside" class="btn btn-outline-primary btn-sm">Completed</button>
+            <button routerLink="/uncompleted" class="btn btn-outline-primary btn-sm">Uncompleted</button>
+            <button routerLink="/users" class="btn btn-outline-primary btn-sm">Users</button>
+            <button routerLink="/" class="btn btn-outline-primary btn-sm">All tasks</button>
+        </div>
+        <div>
+            <button routerLink="/completed" class="btn btn-outline-primary btn-sm real">Real Completed</button>
         </div>
     </div>
 </div>

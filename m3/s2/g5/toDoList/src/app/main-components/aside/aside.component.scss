@@ -1,0 +1,24 @@
+.animated{
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+
+.animated.show {
+    opacity: 1;
+}
+
+.animated.hide {
+    opacity: 0;
+}
+
+audio::-webkit-media-controls-panel {
+    background-color: #56aeff;
+}
+
+audio::-webkit-media-controls-volume-slider {
+    background-color: #b1d4e0;
+    border-radius: 25px;
+    padding-left: 8px;
+    padding-right: 8px;
+}

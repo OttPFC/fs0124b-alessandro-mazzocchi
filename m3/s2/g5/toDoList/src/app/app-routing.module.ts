@@ -4,26 +4,35 @@ import { HomeComponent } from './components/home/home.component';
 import { CompletedComponent } from './components/completed/completed.component';
 import { UncompletedComponent } from './components/uncompleted/uncompleted.component';
 import { UsersComponent } from './components/users/users.component';
+import { AsideComponent } from './main-components/aside/aside.component';
 
 const routes: Routes = [
-  {path:'',
-component:HomeComponent
+  {path:'home',
+  component:HomeComponent,
+  title:'Home'
 },
 {
   path:'completed',
-  component: CompletedComponent
+  component: CompletedComponent,
+  title: 'Completed'
 },
 {
   path:'uncompleted',
-  component: UncompletedComponent
+  component: UncompletedComponent,
+  title: 'Uncompleted'
 },
 {
   path:'users',
-  component: UsersComponent
+  component: UsersComponent,
+  title: 'Users'
+},
+{
+  path:'aside',
+  component: AsideComponent,
 },
 {
   path: '**',
-  redirectTo: ''
+  redirectTo: 'home'
 }
 ];
 

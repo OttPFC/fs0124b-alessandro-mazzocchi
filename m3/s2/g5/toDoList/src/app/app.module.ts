@@ -10,6 +10,8 @@ import { UsersComponent } from './components/users/users.component';
 
 import { UncompletedComponent } from './components/uncompleted/uncompleted.component';
 import { FormsModule } from '@angular/forms';
+import { FooterComponent } from './main-components/footer/footer.component';
+import { AsideComponent } from './main-components/aside/aside.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { FormsModule } from '@angular/forms';
     NavbarComponent,
     CompletedComponent,
     UsersComponent,
-    UncompletedComponent
+    UncompletedComponent,
+    FooterComponent,
+    AsideComponent
   ],
   imports: [
     BrowserModule,

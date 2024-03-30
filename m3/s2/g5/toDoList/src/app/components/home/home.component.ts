@@ -45,12 +45,9 @@ getUserName(userId: number): string {
 getUserTitle(userId: number): string {
   return this.usersService.getUserTitle(userId);
 }
-toggleTaskStatus(task: any){
+taskStatus(task: any){
   task.completed = !task.completed;
 }
-
-
-
 searchTasks(){
   this.filteredTasks = this.task.filter(t => {
     const user = this.users.find(u => u.id === t.userId);
