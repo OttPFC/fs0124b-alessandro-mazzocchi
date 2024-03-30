@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { iTask } from '../../interfaces/task';
-import { iUsers } from '../../interfaces/users';
 import { ListService } from '../../Model/list.service';
 import { UsersService } from '../../Model/users.service';
 
@@ -12,7 +11,6 @@ import { UsersService } from '../../Model/users.service';
 export class UncompletedComponent {
   
   task:iTask[]= [];
-  users:iUsers[]= [];
 
   constructor(
     private taskService: ListService, 
@@ -22,20 +20,11 @@ export class UncompletedComponent {
 ngOnInit() {
 
   this.completedTask()
-  this.allUsers()
-
 }
 
 allTask(){
-  this.taskService.getAllTask().subscribe(task => {
+  this.taskService.$task.subscribe(task => {
     this.task = task;
-  })
-}
-
-allUsers(){
-  this.usersService.getAllUsers().subscribe(users => {
-    this.users = users;
-    console.log(this.users);
   })
 }
 

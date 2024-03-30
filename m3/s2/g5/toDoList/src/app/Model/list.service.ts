@@ -3,7 +3,7 @@ import { iTask } from '../interfaces/task';
 import { BehaviorSubject } from 'rxjs/internal/BehaviorSubject';
 import { map } from 'rxjs/internal/operators/map';
 import { UsersService } from './users.service';
-import { iUsers } from '../interfaces/users';
+
 
 @Injectable({
   providedIn: 'root'
@@ -912,33 +912,11 @@ private taskList:iTask[] = [
     "userId":32
   }
 ];
-users:iUsers[]= [];
-
-
 
 taskSubject = new BehaviorSubject<iTask[]>(this.taskList)
 $task = this.taskSubject.asObservable();
 
   constructor(private usersService:UsersService) { }
-
-getAllTask(){
-  return this.$task;
-}
-
-getAllUsers(){
-  this.usersService.getAllUsers().subscribe(users => {
-    this.users = users;
-    console.log(this.users);
-  })
-}
-getAllUsersId(): number[] {
-  this.usersService.getAllUsers().subscribe(users => {
-    this.users = users;
-    console.log(this.users);
-  });
-  
-  return this.users.map(user => user.id);
-}
 
 getCompletedTask(){
   return this.$task.pipe(

@@ -21,11 +21,10 @@ export class UsersComponent {
     ) {}
 
 ngOnInit() {
-  this.taskService.getAllTask().subscribe(task => {
+  this.taskService.$task.subscribe(task => {
     this.task = task;
-    
   })
-  this.usersService.getAllUsers().subscribe(users => {
+  this.usersService.$users.subscribe(users => {
     this.users = users;
   })
   this.getTasksByUserId(45)

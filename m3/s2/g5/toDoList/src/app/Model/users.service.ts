@@ -816,10 +816,6 @@ export class UsersService {
 
   constructor() { }
 
-  getAllUsers(){
-    return this.$users;
-  }
-
   getUserImage(userId: number): string {
     const user = this.usersList.find(u => u.id === userId);
     return user ? user.image : '';
@@ -834,9 +830,4 @@ export class UsersService {
     const user = this.usersList.find(u => u.id === userId);
     return user ? `${user.title}` : '';
   }
-
-  
-
-
-
 }
