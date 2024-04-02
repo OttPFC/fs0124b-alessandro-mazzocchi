@@ -831,4 +831,8 @@ export class UsersService {
     return user ? `${user.title}` : '';
   }
 
+  taskStatus(task: any){
+    task.completed = !task.completed;
+  }
+
 }

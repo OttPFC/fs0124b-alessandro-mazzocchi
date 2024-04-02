@@ -39,7 +39,7 @@ getUserTitle(userId: number): string {
 }
 
 taskStatus(task: any){
-  task.completed = !task.completed;
+  this.usersService.taskStatus(task);
 }
 
 getTasksByUserId(userId: number){

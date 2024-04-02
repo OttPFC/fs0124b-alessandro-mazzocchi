@@ -46,7 +46,7 @@ getUserTitle(userId: number): string {
   return this.usersService.getUserTitle(userId);
 }
 taskStatus(task: any){
-  task.completed = !task.completed;
+  this.usersService.taskStatus(task);
 }
 searchTasks(){
   this.filteredTasks = this.task.filter(t => {
