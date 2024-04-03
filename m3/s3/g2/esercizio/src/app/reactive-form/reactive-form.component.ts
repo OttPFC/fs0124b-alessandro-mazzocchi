@@ -23,7 +23,6 @@ export class ReactiveFormComponent {
     });
   }
 
-
   // Metodo per ottenere l'errore di validazione
   getErrorMessage(controlName: string): string {
     const control = this.registrationForm.get(controlName);
@@ -33,14 +32,12 @@ export class ReactiveFormComponent {
     }
 
     return control.hasError('required') ? 'You must enter a value' :
-      control.hasError('email') ? 'Not a valid email' :
-        control.hasError('minlength') ? 'Password must be at least 6 characters long' :
-          control.hasError('passwordMismatch') ? 'Passwords do not match' :
-            '';
+           control.hasError('email') ? 'Not a valid email' :
+           control.hasError('minlength') ? 'Password must be at least 6 characters long' :
+           control.hasError('passwordMismatch') ? 'Passwords do not match' :
+           '';
   }
 
-
-  // Metodo per validare la conferma della password
   // Metodo per validare la conferma della password
   validatePassword() {
     const passwordControl = this.registrationForm.get('password');
@@ -60,6 +57,7 @@ export class ReactiveFormComponent {
     }
   }
 
+  // Metodo per inviare il form
   onSubmit() {
     this.validatePassword();
     if (this.registrationForm.valid) {
