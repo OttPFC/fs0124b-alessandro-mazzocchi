@@ -1,0 +1,149 @@
+{
+    
+        "users": [
+            {
+                "id": 1,
+                "name": "Mario",
+                "surname": "Rossi",
+                "age": 25,
+                "email": "mario.rossi@example.com"
+            },
+            {
+                "id": 2,
+                "name": "Laura",
+                "surname": "Bianchi",
+                "age": 30,
+                "email": "laura.bianchi@example.com"
+            },
+            {
+                "id": 3,
+                "name": "Roberto",
+                "surname": "Verdi",
+                "age": 28,
+                "email": "roberto.verdi@example.com"
+            },
+            {
+                "id": 4,
+                "name": "Anna",
+                "surname": "Ferrari",
+                "age": 22,
+                "email": "anna.ferrari@example.com"
+            },
+            {
+                "id": 5,
+                "name": "Giuseppe",
+                "surname": "Russo",
+                "age": 35,
+                "email": "giuseppe.russo@example.com"
+            },
+            {
+                "id": 6,
+                "name": "Sara",
+                "surname": "Galli",
+                "age": 29,
+                "email": "sara.galli@example.com"
+            },
+            {
+                "id": 7,
+                "name": "Marco",
+                "surname": "Conti",
+                "age": 27,
+                "email": "marco.conti@example.com"
+            },
+            {
+                "id": 8,
+                "name": "Francesca",
+                "surname": "Marchetti",
+                "age": 31,
+                "email": "francesca.marchetti@example.com"
+            },
+            {
+                "id": 9,
+                "name": "Luca",
+                "surname": "Costa",
+                "age": 26,
+                "email": "luca.costa@example.com"
+            },
+            {
+                "id": 10,
+                "name": "Elena",
+                "surname": "Romano",
+                "age": 33,
+                "email": "elena.romano@example.com"
+            }
+        ],
+        "movies-popular": [
+            {
+                "id": 1,
+                "title": "Inception",
+                "image": "https://example.com/inception.jpg",
+                "duration": "2h 28min",
+                "rating": 8.8
+            },
+            {
+                "id": 2,
+                "title": "The Shawshank Redemption",
+                "image": "https://example.com/shawshank_redemption.jpg",
+                "duration": "2h 22min",
+                "rating": 9.3
+            },
+            {
+                "id": 3,
+                "title": "The Dark Knight",
+                "image": "https://example.com/dark_knight.jpg",
+                "duration": "2h 32min",
+                "rating": 9.0
+            },
+            {
+                "id": 4,
+                "title": "Pulp Fiction",
+                "image": "https://example.com/pulp_fiction.jpg",
+                "duration": "2h 34min",
+                "rating": 8.9
+            },
+            {
+                "id": 5,
+                "title": "Fight Club",
+                "image": "https://example.com/fight_club.jpg",
+                "duration": "2h 19min",
+                "rating": 8.8
+            },
+            {
+                "id": 6,
+                "title": "Forrest Gump",
+                "image": "https://example.com/forrest_gump.jpg",
+                "duration": "2h 22min",
+                "rating": 8.8
+            },
+            {
+                "id": 7,
+                "title": "The Matrix",
+                "image": "https://example.com/the_matrix.jpg",
+                "duration": "2h 16min",
+                "rating": 8.7
+            },
+            {
+                "id": 8,
+                "title": "Interstellar",
+                "image": "https://example.com/interstellar.jpg",
+                "duration": "2h 49min",
+                "rating": 8.6
+            },
+            {
+                "id": 9,
+                "title": "Gladiator",
+                "image": "https://example.com/gladiator.jpg",
+                "duration": "2h 35min",
+                "rating": 8.5
+            },
+            {
+                "id": 10,
+                "title": "The Godfather",
+                "image": "https://example.com/godfather.jpg",
+                "duration": "2h 55min",
+                "rating": 9.2
+            }
+        ], 
+        "favourites": []
+
+}
