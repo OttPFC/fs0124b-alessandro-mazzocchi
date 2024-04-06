@@ -1,10 +1,7 @@
 import { Component } from '@angular/core';
-import { JwtHelperService } from '@auth0/angular-jwt';
-import { BehaviorSubject, map, tap } from 'rxjs';
-import { iUsers } from '../../interfaces/users';
-import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
-import { environment } from '../../../environments/environment.development';
+import { iLoginData } from '../../interfaces/auth';
+import { AuthService } from '../auth.service';
 
 
 @Component({
@@ -14,7 +11,25 @@ import { environment } from '../../../environments/environment.development';
 })
 export class LoginComponent {
 
-  
+  loginData:iLoginData = {
+    email: 'user@example.com',
+    password: 'password'
+  }
+
+  constructor(
+    private authSvc:AuthService,
+    private router:Router
+    ){}
+
+    signIn(){
+
+      this.authSvc.login(this.loginData)
+      .subscribe(data => {
+        this.router.navigate(['/dashboard'])
+      })
+console.log(this.loginData);
+
+    }
 
 
 

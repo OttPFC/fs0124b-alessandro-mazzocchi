@@ -4,4 +4,5 @@ export interface iMovies {
     image: string
     duration: string
     rating: number
+    description: string
 }
