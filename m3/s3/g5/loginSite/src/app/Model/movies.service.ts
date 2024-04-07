@@ -21,6 +21,19 @@ getAllMovies(){
   .subscribe(movies => this.mov.next(movies))
   
 }
+addMovie(movie: iMovies) {
+  return this.http.post<iMovies>(environment.moviesUrl, movie)
+    .subscribe(newMovie => {
+      this.getAllMovies();  
+    });
+}
+
+deleteMovie(id: number) {
+  return this.http.delete(`${environment.moviesUrl}/${id}`)
+    .subscribe(() => {
+      this.getAllMovies(); 
+    });
+}
 
 addToFav(prod:iMovies){
 const movie = this.fav.find(mov => mov.id === prod.id)
