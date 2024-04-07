@@ -24,6 +24,12 @@
       "password": "$2a$10$I8ktkF9zXfn29NGQarTGzu6iJ5nPPUhOmeEscvo.Dwf.kBUcpj3ui",
       "name": "a",
       "id": 4
+    },
+    {
+      "email": "alb@gmail.com",
+      "password": "$2a$10$sf3jWAKKN2QQETkX4OpnKu1PyWiqDbY5L4gmAIuakPPJorDVaUKGK",
+      "name": "Alberto",
+      "id": 5
     }
   ],
   "movies-popular": [
@@ -268,5 +274,4 @@
       "rating": 8.1
     }
   ]
-  
 }

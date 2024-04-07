@@ -13,16 +13,16 @@
             <h3>Vielli a vedè</h3>
             <p class="lead">Benvenuti nel cuore palpitante de "Il Regno dei Film Epici", il santuario definitivo per gli amanti dell'avventura, dell'azione e dell'eroismo cinematografico. Qui, tra i maestosi picchi delle montagne e le profondità misteriose degli oceani, troverete una collezione senza pari di film che hanno scritto la storia del cinema.</p>
             <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Primary</button>
-                <button type="button" class="btn btn-outline-secondary btn-lg px-4">Default</button>
+                <button type="button" routerLink="/dashboard/movies" class="btn btn-primary btn-lg px-4 me-md-2">Movies</button>
+                <button type="button" routerLink="/dashboard/favourites" class="btn btn-outline-secondary btn-lg px-4">Favourites</button>
             </div>
         </div>
     </div>
 </div>
 <main>
-    <div class="container">
-        <span class="display-5">I Titoli più bollenti</span><small>(attenzione, scottano)</small>
-        <div class="row">
+    <div class="container my-5">
+        <span class="display-5">I Titoli più bollenti di Oggi</span><small>(attenzione, scottano)</small>
+        <div class="row my-1">
             <div class="col-6 my-2" *ngFor="let m of movies.slice(0,4)">
                 <div class="card mb-3 h-100 ">
                     <div class="row g-0">
