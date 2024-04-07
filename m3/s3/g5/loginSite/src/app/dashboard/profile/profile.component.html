@@ -25,21 +25,28 @@
                     </div>
 
                 </div>
+
             </div>
+
         </div>
     </div>
+
 </div>
 
-<div class="container">
-    <div>
-        <span>Utenti Registrati</span>
-        <ul *ngFor="let u of users">
-            <li>
-                <div class="d-flex flex-column">
-                    <span>{{u.name}}</span>
-                    <span>{{u.email}}</span>
-                </div>
-            </li>
-        </ul>
-    </div>
-</div>
+<h2>Lista Utenti</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Abbonamento</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let u of users">
+            <td>{{ u.name }}</td>
+            <td>{{ u.email}}</td>
+            <td>Scrauso</td>
+        </tr>
+    </tbody>
+</table>
