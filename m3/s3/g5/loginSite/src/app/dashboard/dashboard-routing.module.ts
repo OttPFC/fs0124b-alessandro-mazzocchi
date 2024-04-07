@@ -5,6 +5,7 @@ import { HomeComponent } from '../home/home.component';
 import { MoviesComponent } from './movies/movies.component';
 import { FavouritesComponent } from './favourites/favourites.component';
 import { ProfileComponent } from './profile/profile.component';
+import { NewFilmComponent } from './new-film/new-film.component';
 
 const routes: Routes = [
   { path: '', 
@@ -25,6 +26,10 @@ const routes: Routes = [
   {
     path: 'profile',
     component: ProfileComponent
+  },
+  {
+    path: 'add-movies',
+    component: NewFilmComponent
   }
 ];
 

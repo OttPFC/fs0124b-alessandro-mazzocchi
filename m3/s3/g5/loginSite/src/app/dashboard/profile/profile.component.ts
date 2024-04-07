@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AuthService } from '../../auth/auth.service';
 import { iUsers } from '../../interfaces/users';
+import { UsersService } from '../../Model/users.service';
 
 @Component({
   selector: 'app-profile',
@@ -10,12 +11,18 @@ import { iUsers } from '../../interfaces/users';
 export class ProfileComponent {
 
   user:iUsers|undefined;
-  
-constructor(private authSvc: AuthService){}
+  users:iUsers[]=[]
+constructor(private authSvc: AuthService, private userSvc:UsersService){}
   ngOnInit() {
   
     this.authSvc.user$.subscribe(user => {
       this.user = user || undefined;
+    })
+
+    this.userSvc.getAllUsers();
+    
+    this.userSvc.users$.subscribe(user => {
+      this.users = user
     })
   }
 }

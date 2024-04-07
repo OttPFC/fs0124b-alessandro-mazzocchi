@@ -9,52 +9,52 @@ import { environment } from '../../environments/environment.development';
 })
 export class MoviesService {
 
-fav:iMovies[]=[]
+  fav: iMovies[] = [];
 
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) { }
 
-private mov = new Subject<iMovies[]>()
-movies$ = this.mov.asObservable()
+  private mov = new Subject<iMovies[]>();
+  movies$ = this.mov.asObservable();
 
-getAllMovies(){
-  return this.http.get<iMovies[]>(environment.moviesUrl)
-  .subscribe(movies => this.mov.next(movies))
-  
-}
-addMovie(movie: iMovies) {
-  return this.http.post<iMovies>(environment.moviesUrl, movie)
-    .subscribe(newMovie => {
-      this.getAllMovies();  
+  getAllMovies() {
+    return this.http.get<iMovies[]>(environment.moviesUrl)
+      .subscribe(movies => this.mov.next(movies));
+  }
+
+  addMovie(movie: iMovies) {  // Modifica il parametro qui
+    return this.http.post<iMovies>(environment.moviesUrl, movie)
+      .subscribe(newMovie => {
+        this.getAllMovies();
+      });
+  }
+
+  deleteMovie(id: number) {
+    return this.http.delete(`${environment.moviesUrl}/${id}`)
+      .subscribe(() => {
+        this.getAllMovies();
+      });
+  }
+
+  addToFav(prod: iMovies) {
+    const movie = this.fav.find(mov => mov.id === prod.id);
+    if (!movie) {
+      this.fav.push(prod);
+    }
+  }
+
+  removeFromFav(id: number) {
+    const index = this.fav.findIndex(el => el.id === id);
+    this.fav.splice(index, 1);
+  }
+
+  get favList() {
+    return new Observable((obs: Observer<iMovies[]>) => {
+      obs.next(this.fav);
     });
-}
+  }
 
-deleteMovie(id: number) {
-  return this.http.delete(`${environment.moviesUrl}/${id}`)
-    .subscribe(() => {
-      this.getAllMovies(); 
-    });
-}
-
-addToFav(prod:iMovies){
-const movie = this.fav.find(mov => mov.id === prod.id)
-if(!movie){
-  this.fav.push(prod)
-}
-}
-
-removeFromFav(id: number){
-  const index = this.fav.findIndex(el => el.id === id)
-    this.fav.splice(index, 1)
-}
-
-get favList(){
-  return new Observable((obs: Observer<iMovies[]>) => {
-    obs.next(this.fav)
-  })
-}
-
-isFav(id: number) {
-  return this.fav.find(prd => prd.id === id)
-}
+  isFav(id: number) {
+    return this.fav.find(prd => prd.id === id);
+  }
 
 }

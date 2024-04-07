@@ -33,6 +33,10 @@ export class MoviesComponent {
     this.moviesSvc.addToFav(prd)
   }
   isFav(id:number) {
-   return this.moviesSvc.isFav(id)
+    return this.moviesSvc.isFav(id)
+  }
+
+  deleteMovie(id: number) {
+    this.moviesSvc.deleteMovie(id);
   }
 }

@@ -5,7 +5,7 @@ import { MoviesService } from '../../Model/movies.service';
 @Component({
   selector: 'app-new-film',
   templateUrl: './new-film.component.html',
-  styleUrl: './new-film.component.scss'
+  styleUrls: ['./new-film.component.scss']
 })
 export class NewFilmComponent {
   movies: iMovies[] = [];
@@ -18,21 +18,21 @@ export class NewFilmComponent {
     rating: 0
   };
 
-  constructor(private moviesService: MoviesService) { }
+  constructor(private moviesSvc: MoviesService) { }
 
   ngOnInit(): void {
     this.loadMovies();
   }
 
   loadMovies() {
-    this.moviesService.getAllMovies();
-    this.moviesService.movies$.subscribe(movies => {
+    this.moviesSvc.getAllMovies();
+    this.moviesSvc.movies$.subscribe(movies => {
       this.movies = movies;
     });
   }
 
   addMovie() {
-    this.moviesService.addMovie(this.newMovie);
+    this.moviesSvc.addMovie(this.newMovie);
     this.newMovie = {
       id: 0,
       title: '',
@@ -43,7 +43,5 @@ export class NewFilmComponent {
     };
   }
 
-  deleteMovie(id: number) {
-    this.moviesService.deleteMovie(id);
-  }
+  
 }

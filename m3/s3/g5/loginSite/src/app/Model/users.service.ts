@@ -16,7 +16,7 @@ export class UsersService {
 
   getAllUsers(){
     return this.http.get<iUsers[]>(environment.usersUrl)
-   .subscribe(users => this.user.next(users))
+    .subscribe(users => this.user.next(users))
   }
 
 

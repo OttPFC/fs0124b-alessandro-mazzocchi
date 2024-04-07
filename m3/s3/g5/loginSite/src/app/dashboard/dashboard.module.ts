@@ -6,6 +6,9 @@ import { DashboardComponent } from './dashboard.component';
 import { MoviesComponent } from './movies/movies.component';
 import { FavouritesComponent } from './favourites/favourites.component';
 import { ProfileComponent } from './profile/profile.component';
+import { FormsModule } from '@angular/forms';
+import { NewFilmComponent } from './new-film/new-film.component';
+import { HttpClient } from '@angular/common/http';
 
 
 @NgModule({
@@ -13,11 +16,14 @@ import { ProfileComponent } from './profile/profile.component';
     DashboardComponent,
     MoviesComponent,
     FavouritesComponent,
-    ProfileComponent
+    ProfileComponent,
+    NewFilmComponent
   ],
   imports: [
     CommonModule,
-    DashboardRoutingModule
+    DashboardRoutingModule,
+    FormsModule,
+    
   ]
 })
 export class DashboardModule { }
