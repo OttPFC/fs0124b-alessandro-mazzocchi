@@ -21,7 +21,7 @@ export class MoviesService {
       .subscribe(movies => this.mov.next(movies));
   }
 
-  addMovie(movie: iMovies) {  // Modifica il parametro qui
+  addMovie(movie: iMovies) {  
     return this.http.post<iMovies>(environment.moviesUrl, movie)
       .subscribe(newMovie => {
         this.getAllMovies();
