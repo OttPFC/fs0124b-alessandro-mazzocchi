@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { iMovies } from '../interfaces/movies';
-import { BehaviorSubject, Subject } from 'rxjs';
+import { BehaviorSubject, Observable, Observer, Subject } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment.development';
 
@@ -9,6 +9,7 @@ import { environment } from '../../environments/environment.development';
 })
 export class MoviesService {
 
+fav:iMovies[]=[]
 
   constructor(private http:HttpClient) { }
 
@@ -19,6 +20,28 @@ getAllMovies(){
   return this.http.get<iMovies[]>(environment.moviesUrl)
   .subscribe(movies => this.mov.next(movies))
   
+}
+
+addToFav(prod:iMovies){
+const movie = this.fav.find(mov => mov.id === prod.id)
+if(!movie){
+  this.fav.push(prod)
+}
+}
+
+removeFromFav(id: number){
+  const index = this.fav.findIndex(el => el.id === id)
+    this.fav.splice(index, 1)
+}
+
+get favList(){
+  return new Observable((obs: Observer<iMovies[]>) => {
+    obs.next(this.fav)
+  })
+}
+
+isFav(id: number) {
+  return this.fav.find(prd => prd.id === id)
 }
 
 }

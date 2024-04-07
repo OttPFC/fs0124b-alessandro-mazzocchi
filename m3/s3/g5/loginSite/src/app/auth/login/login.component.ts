@@ -12,8 +12,8 @@ import { AuthService } from '../auth.service';
 export class LoginComponent {
 
   loginData:iLoginData = {
-    email: 'user@example.com',
-    password: 'password'
+    email: '',
+    password: ''
   }
 
   constructor(
