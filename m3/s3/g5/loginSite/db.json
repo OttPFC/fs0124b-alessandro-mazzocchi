@@ -30,6 +30,47 @@
       "password": "$2a$10$sf3jWAKKN2QQETkX4OpnKu1PyWiqDbY5L4gmAIuakPPJorDVaUKGK",
       "name": "Alberto",
       "id": 5
+    },
+    {
+      "email": "s@s.it",
+      "password": "$2a$10$iWQipYU0HyvodJka.gkyHu1FBXfMl6OtnLcKlaG0riPkMQbQzlROG",
+      "name": "s",
+      "surname": "s",
+      "id": 6
+    },
+    {
+      "email": "zybuxoh@mailinator.com",
+      "password": "$2a$10$Qycv9XF.IgSLO6TZUMNgX.Kbp5Sy.7YcY1jWGFp8Jed7o7NTDVoCe",
+      "name": "Consequuntur ipsam a",
+      "id": 7
+    },
+    {
+      "email": "suwisop@mailinator.com",
+      "password": "$2a$10$tvpJtMeV6NjXCHWbNqMPfOlYCsuSYxjKL.raqSL5Thj2RhXAgMAKa",
+      "name": "Dolores dolore enim ",
+      "username": "kirewuki",
+      "id": 8
+    },
+    {
+      "email": "v@v.it",
+      "password": "$2a$10$AfYODq3Fy3jTlaEVx/9RVOE.g.JxiJX8tcvvA1VL/TPAVV7a8cA.2",
+      "name": "v",
+      "username": "vv",
+      "id": 9
+    },
+    {
+      "email": "d@d.it",
+      "password": "$2a$10$I8o6PuJPTzo6UymySORUruMSQJhYUX5LAG0HAWImo8axd1HQ/urxm",
+      "name": "d",
+      "username": "dd",
+      "id": 10
+    },
+    {
+      "email": "n@n.it",
+      "password": "$2a$10$zeNaLYS1qDAhaDa5DVdxZ.Izz.Q7paCCrFQDfLW5dzTL8Kah4X83S",
+      "name": "n",
+      "username": "nn",
+      "id": 11
     }
   ],
   "movies-popular": [

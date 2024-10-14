@@ -1,6 +1,39 @@
 
-<div class="bg-warning py-5 text-center ">
-    <div class="container w-25 ">
+<div class="e">
+	<div class="main">  	
+		<input type="checkbox" id="chk" aria-hidden="true" [checked]="showSignup">
+
+			<div class="signup" >
+				<form>
+					<label for="chk" aria-hidden="true">Sign up</label>
+                    
+					<input type="text" name="txt" placeholder="Name" required="" [(ngModel)]="registerData.name" class="form-control">
+
+					<input type="email" name="email" placeholder="Email" required="" [(ngModel)]="registerData.email" class="form-control">
+
+                    <input type="text" name="username" placeholder="UserName" required="" [(ngModel)]="registerData.username" class="form-control">
+
+					<input type="password" name="pswd" placeholder="Password" required="" [(ngModel)]="registerData.password" class="form-control">
+
+					<button (click)="signUp()">Sign up</button>
+				</form>
+			</div>
+
+			<div class="login">
+				<form>
+					<label for="chk" aria-hidden="true">Login</label>
+					<input type="email" name="email" placeholder="Email" required="" [(ngModel)]="loginData.email" class="form-control">
+					<input type="password" name="pswd" placeholder="Password" required="" [(ngModel)]="loginData.password" class="form-control">
+					<button (click)="signIn()">Login</button>
+				</form>
+			</div>
+	</div>
+</div>
+
+<!-- 
+
+<div class="bg-warning py-5 text-center altez ">
+    <div class="container  ">
         <main class="form-signin border border-dark p-3">
             <form class="m-2">
 
@@ -30,5 +63,6 @@
         </main>
     </div>
 </div>
+-->
     
 

@@ -11,21 +11,17 @@
 
             </ul>
 
-            <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-                <input type="search" class="form-control form-control-dark text-bg-white" placeholder="Search..."
-                    aria-label="Search">
-            </form>
 
             <div class="text-end">
                 <button type="button" routerLink="/auth/login" class="btn btn-outline-light me-2"
-                    *ngIf="!isUserLoggedIn">Login</button>
-                <button type="button" routerLink="/auth/register" class="btn btn-warning"
-                    *ngIf="!isUserLoggedIn">Sign-up</button>
+                    *ngIf="!isUserLoggedIn" [queryParams]="{action: 'login'}">Login</button>
+                <button type="button" routerLink="/auth/login" class="btn btn-warning"
+                    *ngIf="!isUserLoggedIn" [queryParams]="{action: 'signup'}">Sign-up</button>
                 <div class="row" *ngIf="isUserLoggedIn">
                     <div class="col">
                         <div ngbDropdown class="d-inline-block">
                             <button type="button" class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
-                                Toggle dropdown
+                                Settings
                             </button>
                             <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
                                 <button ngbDropdownItem routerLink="/dashboard/profile">Profile</button>

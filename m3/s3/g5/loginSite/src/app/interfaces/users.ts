@@ -1,7 +1,7 @@
 export interface iUsers {
     id: number
     name: string
-    surname: string
+    username: string
     email: string
-    password?: string
+    password: string
 }
